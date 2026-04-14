@@ -2,916 +2,999 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>미소공인중개사사무소 | 서울숲 성동구 부동산</title>
-<meta name="description" content="서울 성동구 서울숲 인근 미소공인중개사사무소. 매매·전세·월세 전문. 서울특별시 성동구 고산자로2길 67 서울숲리버뷰자이아파트 상가">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>미소공인중개사사무소 | 서울숲 성동구 안심 부동산</title>
+<meta name="description" content="서울 성동구 서울숲 인근 미소공인중개사사무소. 아파트 매매·전세·월세 및 상업용 부동산 전문. 대표 이주영.">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;500&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Cormorant+Garamond:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+
 <style>
-  :root {
-    --ivory: #F7F3ED;
-    --warm-white: #FDFAF6;
-    --charcoal: #2C2C2C;
-    --dark: #1A1A1A;
-    --gold: #B8965A;
-    --gold-light: #D4AF7A;
-    --gold-pale: #F0E6D3;
-    --text-mid: #5A5A5A;
-    --text-light: #8A8A8A;
-    --border: rgba(184,150,90,0.2);
-  }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: 'Noto Sans KR', sans-serif;
-    background: var(--warm-white);
-    color: var(--charcoal);
-    line-height: 1.7;
-    overflow-x: hidden;
-  }
+/* ── DESIGN TOKENS (디자인 변수) ── */
+:root {
+  --ivory: #F7F3ED;
+  --warm-white: #FDFAF6;
+  --charcoal: #2C2C2C;
+  --dark: #1A1A1A;
+  --gold: #B8965A;
+  --gold-light: #D4AF7A;
+  --gold-pale: #F0E6D3;
+  --text-mid: #555555;
+  --text-light: #8A8A8A;
+  --border: rgba(184, 150, 90, 0.2);
+  --bar-h: 64px;
+}
 
-  /* ── NAV ── */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 1rem 2.5rem;
-    background: rgba(253,250,246,0.95);
-    backdrop-filter: blur(14px);
-    border-bottom: 1px solid var(--border);
-    transition: box-shadow 0.3s;
-  }
-  .nav-logo {
-    font-family: 'Noto Serif KR', serif;
-    font-size: 1rem; font-weight: 600;
-    color: var(--charcoal); text-decoration: none; letter-spacing: 0.02em;
-    white-space: nowrap;
-  }
-  .nav-logo span { color: var(--gold); }
-  .nav-links { display: flex; gap: 2rem; list-style: none; }
-  .nav-links a {
-    font-size: 0.8rem; color: var(--text-mid); text-decoration: none;
-    letter-spacing: 0.06em; transition: color 0.2s; position: relative;
-  }
-  .nav-links a::after {
-    content: ''; position: absolute; bottom: -3px; left: 0; right: 0;
-    height: 1px; background: var(--gold);
-    transform: scaleX(0); transform-origin: left; transition: transform 0.3s;
-  }
-  .nav-links a:hover { color: var(--gold); }
-  .nav-links a:hover::after { transform: scaleX(1); }
-  .nav-cta {
-    font-size: 0.78rem; padding: 0.5rem 1.2rem;
-    background: var(--gold); color: white;
-    border-radius: 2px; text-decoration: none; font-weight: 500;
-    letter-spacing: 0.06em; transition: background 0.2s;
-    white-space: nowrap;
-  }
-  .nav-cta:hover { background: #9A7A45; }
+/* ── RESET & BASE ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
 
-  /* Hamburger */
-  .hamburger {
-    display: none; flex-direction: column; gap: 5px;
-    background: none; border: none; cursor: pointer; padding: 4px;
-  }
-  .hamburger span {
-    display: block; width: 22px; height: 2px;
-    background: var(--charcoal); border-radius: 2px;
-    transition: all 0.3s;
-  }
-  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-  .hamburger.open span:nth-child(2) { opacity: 0; }
-  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+body {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  background: var(--warm-white);
+  color: var(--charcoal);
+  line-height: 1.8;
+  overflow-x: hidden;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  padding-bottom: calc(var(--bar-h) + env(safe-area-inset-bottom, 0px));
+}
 
-  /* Mobile menu */
-  .mobile-menu {
-    display: none; position: fixed;
-    top: 60px; left: 0; right: 0; z-index: 190;
-    background: var(--warm-white);
-    border-bottom: 1px solid var(--border);
-    padding: 1.5rem 2rem;
-    flex-direction: column; gap: 1rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  }
-  .mobile-menu.open { display: flex; }
-  .mobile-menu a {
-    font-size: 0.9rem; color: var(--charcoal); text-decoration: none;
-    padding: 0.5rem 0; border-bottom: 1px solid var(--border);
-    font-weight: 400;
-  }
-  .mobile-menu a:last-child { border-bottom: none; }
-  .mobile-menu .m-cta {
-    background: var(--gold); color: white !important;
-    text-align: center; padding: 0.8rem !important;
-    border-radius: 2px; font-weight: 500;
-    border-bottom: none !important; margin-top: 0.5rem;
-  }
+/* ── HIGHLIGHT EFFECT (형광펜 효과) ── */
+.highlight {
+  position: relative;
+  display: inline;
+  z-index: 1;
+}
+.highlight::after {
+  content: '';
+  position: absolute;
+  left: -2px; right: -2px; bottom: 0.08em;
+  height: 0.38em;
+  background: rgba(184, 150, 90, 0.22);
+  z-index: -1;
+  border-radius: 2px;
+}
+.bg-dark .highlight { color: white; }
+.bg-dark .highlight::after { background: rgba(184, 150, 90, 0.5); }
 
-  /* ── HERO ── */
-  #hero {
-    min-height: 100svh;
-    display: grid; grid-template-columns: 1fr 1fr;
-    padding-top: 62px;
-  }
-  .hero-left {
-    display: flex; flex-direction: column; justify-content: center;
-    padding: 4rem 3rem 4rem 5rem;
-  }
-  .hero-eyebrow {
-    font-size: 0.68rem; font-weight: 500; letter-spacing: 0.22em;
-    color: var(--gold); text-transform: uppercase; margin-bottom: 1.6rem;
-    display: flex; align-items: center; gap: 0.8rem;
-  }
-  .hero-eyebrow::before {
-    content: ''; display: inline-block;
-    width: 2rem; height: 1px; background: var(--gold);
-  }
-  .hero-title {
-    font-family: 'Noto Serif KR', serif;
-    font-size: clamp(1.8rem, 3.5vw, 3.2rem);
-    font-weight: 300; line-height: 1.35; color: var(--dark);
-  }
-  .hero-title strong { font-weight: 700; display: block; }
-  .hero-title em {
-    font-style: italic; color: var(--gold);
-    font-family: 'Playfair Display', serif; font-size: 1.1em;
-  }
-  .hero-desc {
-    font-size: 0.9rem; font-weight: 300; color: var(--text-mid);
-    margin: 1.8rem 0 2.5rem; line-height: 1.95; max-width: 26rem;
-  }
-  .hero-buttons { display: flex; gap: 0.8rem; flex-wrap: wrap; }
-  .btn-primary {
-    padding: 0.85rem 2rem; background: var(--gold); color: white;
-    font-size: 0.8rem; font-weight: 500; letter-spacing: 0.06em;
-    border: none; border-radius: 2px; cursor: pointer;
-    text-decoration: none; transition: all 0.25s;
-    display: inline-flex; align-items: center; gap: 0.4rem;
-  }
-  .btn-primary:hover { background: #9A7A45; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(184,150,90,0.35); }
-  .btn-outline {
-    padding: 0.85rem 2rem; background: transparent;
-    color: var(--charcoal); font-size: 0.8rem; font-weight: 500;
-    letter-spacing: 0.06em; border: 1px solid rgba(44,44,44,0.22);
-    border-radius: 2px; cursor: pointer; text-decoration: none;
-    transition: all 0.25s;
-  }
-  .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
-  .hero-stats {
-    display: flex; gap: 2rem; margin-top: 3rem;
-    padding-top: 2.5rem; border-top: 1px solid var(--border);
-    flex-wrap: wrap;
-  }
-  .hero-stat-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.9rem; font-weight: 700; color: var(--gold);
-  }
-  .hero-stat-label { font-size: 0.72rem; color: var(--text-light); margin-top: 0.1rem; }
-  .hero-right { position: relative; overflow: hidden; }
-  .hero-visual {
-    width: 100%; height: 100%; min-height: 500px;
-    background: linear-gradient(160deg, #2C3E2D 0%, #3D5C42 30%, #5A7A5E 55%, #B8965A 85%, #D4AF7A 100%);
-    display: flex; align-items: center; justify-content: center;
-    position: relative; overflow: hidden;
-  }
-  .hero-visual::before {
-    content: ''; position: absolute; inset: 0;
-    background: radial-gradient(ellipse at 70% 40%, rgba(212,175,122,0.2) 0%, transparent 60%);
-  }
-  .hero-visual-inner {
-    position: relative; z-index: 2; text-align: center; color: white; padding: 2rem;
-  }
-  .hero-visual-badge {
-    width: 80px; height: 80px; border: 2px solid rgba(255,255,255,0.35);
-    border-radius: 50%; display: flex; align-items: center; justify-content: center;
-    margin: 0 auto 1.2rem; font-size: 2rem;
-  }
-  .hero-visual-text {
-    font-family: 'Noto Serif KR', serif; font-size: 1.4rem;
-    font-weight: 300; letter-spacing: 0.12em; opacity: 0.95;
-  }
-  .hero-visual-sub {
-    font-size: 0.7rem; letter-spacing: 0.18em; opacity: 0.55;
-    margin-top: 0.4rem; text-transform: uppercase;
-  }
-  .hero-tag {
-    position: absolute; bottom: 2.5rem; left: -1rem;
-    background: var(--warm-white); padding: 1rem 1.5rem;
-    box-shadow: 0 16px 40px rgba(0,0,0,0.12);
-    border-left: 3px solid var(--gold); z-index: 3;
-  }
-  .hero-tag-label { font-size: 0.65rem; color: var(--text-light); letter-spacing: 0.1em; margin-bottom: 0.25rem; }
-  .hero-tag-value { font-family: 'Noto Serif KR', serif; font-size: 0.88rem; font-weight: 600; color: var(--charcoal); }
+/* ── NAVIGATION ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0.9rem 2.5rem;
+  background: rgba(253, 250, 246, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  transition: box-shadow 0.3s ease;
+  min-height: 62px;
+}
+.nav-logo {
+  font-family: 'Gowun Batang', serif;
+  font-size: 1.15rem; font-weight: 700;
+  color: var(--charcoal); text-decoration: none; white-space: nowrap;
+}
+.nav-logo span { color: var(--gold); }
 
-  /* Animations */
-  @keyframes fadeInLeft { from { opacity:0; transform:translateX(-28px); } to { opacity:1; transform:none; } }
-  @keyframes fadeInRight { from { opacity:0; transform:translateX(28px); } to { opacity:1; transform:none; } }
-  .hero-left > * { animation: fadeInLeft 0.7s ease both; }
-  .hero-left > *:nth-child(1) { animation-delay: 0.1s; }
-  .hero-left > *:nth-child(2) { animation-delay: 0.2s; }
-  .hero-left > *:nth-child(3) { animation-delay: 0.3s; }
-  .hero-left > *:nth-child(4) { animation-delay: 0.4s; }
-  .hero-left > *:nth-child(5) { animation-delay: 0.5s; }
-  .hero-right { animation: fadeInRight 0.8s ease 0.15s both; }
+.nav-links { display: flex; gap: 2.2rem; list-style: none; }
+.nav-links a {
+  font-size: 0.9rem; font-weight: 500; color: var(--text-mid);
+  text-decoration: none; letter-spacing: 0.02em; transition: color 0.2s; position: relative;
+}
+.nav-links a::after {
+  content: ''; position: absolute; bottom: -5px; left: 0; right: 0;
+  height: 2px; background: var(--gold);
+  transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease;
+}
+.nav-links a:hover { color: var(--gold); }
+.nav-links a:hover::after { transform: scaleX(1); }
 
-  /* ── SECTION COMMONS ── */
+.nav-cta {
+  font-size: 0.85rem; padding: 0.6rem 1.4rem;
+  background: var(--gold); color: white;
+  border-radius: 4px; text-decoration: none; font-weight: 600;
+  letter-spacing: 0.03em; transition: all 0.2s ease; white-space: nowrap;
+}
+.nav-cta:hover { background: #9A7A45; box-shadow: 0 4px 12px rgba(184,150,90,0.3); }
+
+/* Hamburger Menu (Mobile) */
+.hamburger {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer; padding: 6px;
+  -webkit-tap-highlight-color: transparent;
+}
+.hamburger span {
+  display: block; width: 24px; height: 2px;
+  background: var(--charcoal); border-radius: 2px; transition: all 0.3s;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.mobile-menu {
+  display: none; position: fixed;
+  top: 62px; left: 0; right: 0; z-index: 190;
+  background: var(--warm-white);
+  border-bottom: 1px solid var(--border);
+  padding: 1.5rem 2rem;
+  flex-direction: column; gap: 0;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+.mobile-menu.open { display: flex; animation: slideDown 0.3s ease forwards; }
+@keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+.mobile-menu a {
+  font-size: 1rem; font-weight: 500; color: var(--charcoal); text-decoration: none;
+  padding: 1rem 0; border-bottom: 1px solid var(--border);
+  -webkit-tap-highlight-color: transparent; transition: color 0.2s;
+}
+.mobile-menu a:hover { color: var(--gold); }
+.mobile-menu a:last-child { border-bottom: none; }
+
+/* ── HERO SECTION ── */
+#hero {
+  min-height: 100svh;
+  display: grid; grid-template-columns: 1fr 1fr;
+  padding-top: 62px; padding-bottom: 0;
+}
+.hero-left {
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 4rem 3rem 4rem 5rem;
+}
+.hero-eyebrow {
+  font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em;
+  color: var(--gold); text-transform: uppercase; margin-bottom: 1.6rem;
+  display: flex; align-items: center; gap: 0.8rem;
+}
+.hero-eyebrow::before {
+  content: ''; display: inline-block; width: 2.5rem; height: 1px; background: var(--gold);
+}
+.hero-title {
+  font-family: 'Gowun Batang', serif;
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  font-weight: 400; line-height: 1.35; color: var(--dark); letter-spacing: -0.02em;
+}
+.hero-title strong { font-weight: 700; display: block; margin-top: 0.4rem; }
+.hero-title em {
+  font-style: italic; color: var(--gold);
+  font-family: 'Cormorant Garamond', serif; font-size: 1.15em; margin-left: 0.2rem;
+}
+.hero-desc {
+  font-size: 1.1rem; font-weight: 400; color: var(--text-mid);
+  margin: 2rem 0 2.5rem; line-height: 1.85; max-width: 30rem;
+}
+
+.hero-consult-label {
+  font-size: 0.8rem; font-weight: 600; color: var(--text-light); letter-spacing: 0.1em;
+  margin-bottom: 0.8rem; display: block; text-transform: uppercase;
+}
+.hero-consult-icons { display: flex; gap: 1rem; align-items: center; margin-bottom: 1.8rem; flex-wrap: wrap; }
+.consult-icon-btn {
+  width: 56px; height: 56px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  text-decoration: none; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+  -webkit-tap-highlight-color: transparent;
+}
+.consult-icon-btn.call { background: #2C8E4B; color: white; }
+.consult-icon-btn.kakao { background: #FEE500; color: #3C1E1E; }
+.consult-icon-btn.sms { background: #3A6EDB; color: white; }
+.consult-icon-btn.sns-naver { background: #03C75A; }
+.consult-icon-btn.sns-instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+.consult-icon-btn.sns-youtube { background: #FF0000; }
+.consult-icon-btn:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.2); }
+
+.hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-outline {
+  padding: 1rem 2.5rem; background: transparent;
+  color: var(--charcoal); font-size: 0.95rem; font-weight: 600;
+  letter-spacing: 0.02em; border: 1.5px solid rgba(44,44,44,0.3);
+  border-radius: 4px; text-decoration: none; transition: all 0.3s ease;
+  display: inline-flex; align-items: center; gap: 0.5rem;
+}
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); background: rgba(184,150,90,0.04); }
+
+.hero-stats {
+  display: flex; gap: 3.5rem; margin-top: 3.5rem;
+  padding-top: 2.5rem; border-top: 1px solid var(--border); flex-wrap: wrap;
+}
+.hero-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem; font-weight: 600; color: var(--gold); line-height: 1;
+}
+.hero-stat-label { font-size: 0.85rem; font-weight: 500; color: var(--text-light); margin-top: 0.5rem; }
+
+.hero-right { position: relative; overflow: hidden; }
+.hero-greeting {
+  width: 100%; height: 100%; min-height: 500px;
+  background: linear-gradient(160deg, #1E2D1F 0%, #2C3E2D 30%, #3D5C42 65%, #7A6040 100%);
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden; padding: 4rem;
+}
+.hero-greeting::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 80% 20%, rgba(184,150,90,0.2) 0%, transparent 60%),
+              radial-gradient(ellipse at 15% 85%, rgba(44,62,45,0.6) 0%, transparent 55%);
+}
+.hero-greeting::after {
+  content: ''; position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+}
+.hero-greeting-inner { position: relative; z-index: 2; color: white; max-width: 420px; }
+.greeting-badge {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gold-light); opacity: 0.9; margin-bottom: 2rem;
+}
+.greeting-badge::before, .greeting-badge::after {
+  content: ''; display: block; width: 1.8rem; height: 1px; background: var(--gold-light); opacity: 0.6;
+}
+.greeting-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 3vw, 2.4rem); font-style: italic; line-height: 1.6;
+  color: rgba(255,255,255,0.98); margin-bottom: 2rem;
+}
+.greeting-quote strong {
+  font-style: normal; font-family: 'Gowun Batang', serif;
+  color: var(--gold-light); display: block;
+  font-size: 0.75em; margin-bottom: 0.8rem; letter-spacing: -0.02em;
+}
+.greeting-body {
+  font-size: 1rem; font-weight: 300; color: rgba(255,255,255,0.85); line-height: 1.95;
+  border-left: 3px solid rgba(184,150,90,0.6); padding-left: 1.5rem; margin-bottom: 3rem;
+}
+.greeting-sig { display: flex; align-items: center; gap: 1.2rem; }
+.greeting-sig-bar { width: 3rem; height: 1px; background: var(--gold-light); opacity: 0.6; }
+.greeting-sig-name {
+  font-family: 'Gowun Batang', serif;
+  font-size: 1.1rem; font-weight: 700; color: rgba(255,255,255,0.95); letter-spacing: 0.05em;
+}
+.greeting-sig-title {
+  font-size: 0.75rem; font-weight: 400; color: rgba(255,255,255,0.5);
+  letter-spacing: 0.08em; margin-top: 0.3rem;
+}
+
+/* Hero Animations */
+@keyframes fadeInLeft { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: none; } }
+@keyframes fadeInRight { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: none; } }
+.hero-left > * { animation: fadeInLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.hero-left > *:nth-child(1) { animation-delay: 0.1s; }
+.hero-left > *:nth-child(2) { animation-delay: 0.2s; }
+.hero-left > *:nth-child(3) { animation-delay: 0.3s; }
+.hero-left > *:nth-child(4) { animation-delay: 0.4s; }
+.hero-left > *:nth-child(5) { animation-delay: 0.5s; }
+.hero-left > *:nth-child(6) { animation-delay: 0.6s; }
+.hero-left > *:nth-child(7) { animation-delay: 0.7s; }
+.hero-right { animation: fadeInRight 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both; }
+
+/* ── SECTIONS BASE ── */
+section { padding: 7rem 0; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 2.5rem; }
+.section-label {
+  font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em;
+  color: var(--gold); text-transform: uppercase;
+  display: flex; align-items: center; gap: 1rem; margin-bottom: 1.2rem;
+}
+.section-label::before { content: ''; display: block; width: 2.5rem; height: 1.5px; background: var(--gold); }
+.section-title {
+  font-family: 'Gowun Batang', serif;
+  font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 400; line-height: 1.5;
+  color: var(--dark); letter-spacing: -0.02em;
+}
+.section-title strong { font-weight: 700; }
+
+/* ── SERVICES ── */
+#services { background: var(--ivory); }
+.services-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+  margin-top: 4.5rem; background: var(--border); border: 1px solid var(--border);
+}
+.service-card {
+  background: var(--warm-white); padding: 3.5rem 2.5rem;
+  position: relative; overflow: hidden; transition: background 0.4s ease;
+}
+.service-card::before {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px;
+  background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease;
+}
+.service-card:hover::before { transform: scaleX(1); }
+.service-card:hover { background: var(--gold-pale); }
+.service-icon { font-size: 2.5rem; margin-bottom: 1.5rem; display: block; }
+.service-num {
+  position: absolute; top: 1.5rem; right: 2rem;
+  font-family: 'Cormorant Garamond', serif; font-size: 4rem; font-weight: 600;
+  color: rgba(184,150,90,0.06); line-height: 1; user-select: none;
+}
+.service-name {
+  font-family: 'Gowun Batang', serif; font-size: 1.25rem; font-weight: 700;
+  color: var(--dark); margin-bottom: 1rem;
+}
+.service-desc { font-size: 1rem; color: var(--text-mid); line-height: 1.8; font-weight: 400; }
+
+/* ── WHY US ── */
+#why { display: grid; grid-template-columns: 1fr 1fr; padding: 0; }
+.why-visual {
+  background: linear-gradient(145deg, #2C3E2D 0%, #4A6650 50%, #5C7A60 100%);
+  position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; min-height: 550px;
+}
+.why-visual::after {
+  content: ''; position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4z'/%3E%3C/g%3E%3C/svg%3E");
+}
+.why-visual-content { position: relative; z-index: 2; padding: 3rem; text-align: center; color: white; }
+.why-quote {
+  font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-style: italic;
+  line-height: 1.5; opacity: 0.98; margin-bottom: 1.5rem;
+}
+.why-quote-author { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.15em; opacity: 0.7; text-transform: uppercase; }
+.why-content { padding: 6rem 5rem; display: flex; flex-direction: column; justify-content: center; }
+.why-list { margin-top: 3.5rem; display: flex; flex-direction: column; gap: 3rem; }
+.why-item { display: flex; gap: 1.5rem; align-items: flex-start; }
+.why-item-icon {
+  width: 54px; height: 54px; min-width: 54px;
+  background: var(--gold-pale); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; font-size: 1.2rem;
+}
+.why-item-text h4 {
+  font-family: 'Gowun Batang', serif; font-size: 1.2rem; font-weight: 700;
+  color: var(--dark); margin-bottom: 0.6rem;
+}
+.why-item-text p { font-size: 1rem; color: var(--text-mid); font-weight: 400; line-height: 1.8; }
+
+/* ── GALLERY ── */
+#gallery { background: var(--warm-white); }
+
+/* ── GALLERY COMING SOON ── */
+.gallery-coming {
+  margin-top: 4rem;
+  display: flex; flex-direction: column; align-items: center;
+  padding: 5rem 2rem;
+  background: var(--ivory);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-align: center;
+}
+.gallery-coming-icon {
+  width: 88px; height: 88px; border-radius: 50%;
+  background: white; border: 1.5px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gold); margin-bottom: 1.8rem;
+  box-shadow: 0 8px 24px rgba(184,150,90,0.1);
+}
+.gallery-coming-badge {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.25em;
+  color: var(--gold); text-transform: uppercase;
+  background: var(--gold-pale); padding: 0.35rem 1rem; border-radius: 20px;
+  margin-bottom: 1.4rem;
+}
+.gallery-coming-title {
+  font-family: 'Gowun Batang', serif;
+  font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 700;
+  color: var(--dark); margin-bottom: 1.2rem; letter-spacing: -0.02em;
+}
+.gallery-coming-desc {
+  font-size: 1rem; color: var(--text-mid); line-height: 1.9; font-weight: 400;
+  max-width: 480px;
+}
+.gallery-coming-divider {
+  width: 3rem; height: 1.5px; background: var(--border);
+  margin: 2rem 0;
+}
+.gallery-coming-sub {
+  font-size: 0.88rem; color: var(--text-light); font-weight: 400;
+}
+
+/* ── PROPERTIES ── */
+#properties { background: var(--ivory); }
+.prop-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3.5rem; flex-wrap: wrap; gap: 1rem; }
+.prop-more-link {
+  font-size: 0.95rem; font-weight: 600; color: var(--gold); text-decoration: none;
+  display: flex; align-items: center; gap: 0.5rem; transition: opacity 0.2s;
+}
+.prop-more-link:hover { opacity: 0.75; }
+.prop-iframe-wrap {
+  border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
+  background: white; box-shadow: 0 15px 50px rgba(0,0,0,0.05);
+}
+.prop-iframe-header {
+  background: var(--charcoal); padding: 1.5rem 2rem; display: flex; align-items: center; gap: 1rem;
+}
+.prop-iframe-header-text { font-size: 0.8rem; font-weight: 500; color: rgba(255,255,255,0.6); }
+.prop-iframe-header-name { font-family: 'Gowun Batang', serif; font-size: 1.1rem; color: white; font-weight: 700; }
+.prop-iframe-wrap iframe { width: 100%; height: 60vh; min-height: 500px; max-height: 800px; border: none; display: block; }
+.prop-iframe-footer {
+  padding: 1.5rem 2rem; background: var(--ivory); border-top: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+}
+.prop-iframe-footer p { font-size: 0.9rem; font-weight: 500; color: var(--text-mid); }
+.prop-iframe-link { font-size: 0.9rem; font-weight: 600; color: var(--gold); text-decoration: none; display: flex; align-items: center; gap: 0.4rem; }
+.prop-iframe-link:hover { text-decoration: underline; }
+
+/* ── CALCULATOR ── */
+#calculator {
+  background: linear-gradient(180deg, var(--warm-white) 0%, var(--ivory) 100%);
+}
+.calc-intro {
+  margin-top: 1.3rem;
+  max-width: 860px;
+  font-size: 1.05rem;
+  color: var(--text-mid);
+  line-height: 1.85;
+}
+.calc-shell {
+  margin-top: 3.5rem;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 18px 50px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+.calc-topbar {
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, #2b3130 0%, #3b4a46 100%);
+  color: white;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.calc-topbar-title {
+  font-family: 'Gowun Batang', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+.calc-topbar-desc {
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.75;
+}
+.calc-tab-nav {
+  display: flex;
+  gap: 0.75rem;
+  padding: 1.4rem 2rem 0;
+  flex-wrap: wrap;
+  background: white;
+}
+.calc-tab-btn {
+  border: 1px solid var(--border);
+  background: var(--warm-white);
+  color: var(--text-mid);
+  padding: 0.9rem 1.25rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.calc-tab-btn:hover {
+  border-color: rgba(184,150,90,0.5);
+  color: var(--gold);
+}
+.calc-tab-btn.active {
+  background: var(--gold);
+  color: white;
+  border-color: var(--gold);
+  box-shadow: 0 10px 24px rgba(184,150,90,0.24);
+}
+.calc-panels {
+  padding: 2rem;
+}
+.calc-panel {
+  display: none;
+}
+.calc-panel.active {
+  display: block;
+}
+.calc-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.9fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+.calc-card {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--warm-white);
+  overflow: hidden;
+}
+.calc-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.15rem 1.4rem;
+  border-bottom: 1px solid var(--border);
+  background: rgba(184,150,90,0.06);
+}
+.calc-card-head h3,
+.calc-card-head h4 {
+  margin: 0;
+  font-family: 'Gowun Batang', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--dark);
+}
+.calc-card-body {
+  padding: 1.4rem;
+}
+.calc-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.calc-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.calc-field.full {
+  grid-column: 1 / -1;
+}
+.calc-label {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--text-light);
+}
+.calc-input,
+.calc-select {
+  width: 100%;
+  border: 1px solid rgba(44,44,44,0.14);
+  border-radius: 12px;
+  background: white;
+  color: var(--charcoal);
+  padding: 0.9rem 0.95rem;
+  font-size: 0.96rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+.calc-input:focus,
+.calc-select:focus {
+  border-color: rgba(184,150,90,0.75);
+  box-shadow: 0 0 0 4px rgba(184,150,90,0.12);
+}
+.calc-input:disabled {
+  background: #f6f2eb;
+  color: #9a958a;
+  cursor: not-allowed;
+}
+.calc-toggle-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+.calc-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.78rem 1rem;
+  border-radius: 999px;
+  background: white;
+  border: 1px solid var(--border);
+  font-size: 0.92rem;
+  color: var(--text-mid);
+  cursor: pointer;
+}
+.calc-chip input {
+  margin: 0;
+  accent-color: var(--gold);
+}
+.calc-help {
+  margin-top: -0.1rem;
+  font-size: 0.8rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+.calc-field.is-disabled .calc-help {
+  color: #b1a89b;
+}
+.calc-summary {
+  display: grid;
+  gap: 0.9rem;
+}
+.calc-summary-item {
+  padding: 1rem 1.05rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: white;
+}
+.calc-summary-item.primary {
+  background: linear-gradient(180deg, #fff8ef 0%, #fff3dd 100%);
+  border-color: rgba(184,150,90,0.38);
+}
+.calc-summary-item .k {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+.calc-summary-item .v {
+  font-size: 1.55rem;
+  line-height: 1.25;
+  font-weight: 800;
+  color: var(--dark);
+}
+.calc-summary-item.primary .v {
+  color: #8a6228;
+}
+.calc-breakdown-wrap {
+  margin-top: 1.3rem;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  background: white;
+}
+.calc-breakdown-head {
+  padding: 1rem 1.4rem;
+  border-bottom: 1px solid var(--border);
+  background: rgba(184,150,90,0.05);
+  font-family: 'Gowun Batang', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--dark);
+}
+.calc-breakdown {
+  width: 100%;
+  border-collapse: collapse;
+}
+.calc-breakdown th,
+.calc-breakdown td {
+  padding: 0.95rem 1.1rem;
+  border-bottom: 1px solid rgba(184,150,90,0.14);
+  font-size: 0.94rem;
+}
+.calc-breakdown thead th,
+.calc-breakdown thead td {
+  background: #fcfaf6;
+  font-weight: 800;
+}
+.calc-breakdown th {
+  text-align: left;
+  font-weight: 700;
+  color: var(--text-mid);
+  width: 48%;
+}
+.calc-breakdown td {
+  text-align: right;
+  font-weight: 600;
+  color: var(--dark);
+}
+.calc-breakdown tbody tr:last-child th,
+.calc-breakdown tbody tr:last-child td {
+  border-bottom: none;
+}
+.calc-note-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.calc-note,
+.calc-maintain {
+  padding: 1rem 1.1rem;
+  border-radius: 14px;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+.calc-note {
+  background: #fff7e8;
+  border: 1px solid #f1dfbb;
+  color: #6f5a34;
+}
+.calc-maintain {
+  background: #f8f6f2;
+  border: 1px solid var(--border);
+  color: var(--text-mid);
+}
+.calc-maintain strong,
+.calc-note strong {
+  color: var(--dark);
+}
+
+/* ── AREA (LOCATION) ── */
+#area { background: var(--warm-white); }
+.area-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 6rem; align-items: start; margin-top: 4.5rem; }
+.area-text p { font-size: 1.05rem; color: var(--text-mid); line-height: 1.9; font-weight: 400; margin-bottom: 1.8rem; }
+.area-highlight {
+  background: white; border-left: 4px solid var(--gold);
+  padding: 2rem 2.5rem; margin-top: 2rem; border-radius: 0 8px 8px 0; box-shadow: 0 8px 25px rgba(0,0,0,0.04);
+}
+.area-highlight h4 { font-family: 'Gowun Batang', serif; font-weight: 700; font-size: 1.15rem; margin-bottom: 1.2rem; color: var(--dark); }
+.area-list { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; }
+.area-list li { font-size: 1rem; color: var(--text-mid); font-weight: 400; display: flex; align-items: center; gap: 1rem; }
+.area-list li::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+
+.area-map-wrap {
+  border-radius: 12px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.08); border: 1px solid var(--border);
+}
+.map-header { background: var(--charcoal); padding: 1.5rem 2rem; display: flex; align-items: center; gap: 1rem; }
+.map-header-text { font-size: 0.8rem; font-weight: 500; color: rgba(255,255,255,0.5); }
+.map-header-name { font-family: 'Gowun Batang', serif; font-size: 1.1rem; color: white; font-weight: 700; }
+.map-frame-wrap iframe { width: 100%; height: 350px; border: none; display: block; }
+.map-links { display: grid; grid-template-columns: 1fr 1fr; }
+.map-link {
+  padding: 1.2rem 0.5rem; text-align: center; font-size: 0.95rem; font-weight: 600; text-decoration: none;
+  display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+  transition: background 0.2s; border: 1px solid var(--border); border-top: none; background: white; -webkit-tap-highlight-color: transparent;
+}
+.map-link:nth-child(odd) { border-right: none; }
+.map-link:nth-child(1), .map-link:nth-child(2) { border-bottom: none; }
+.map-link.naver { color: #03C75A; } .map-link.naver:hover { background: #F0FFF6; }
+.map-link.google { color: #4285F4; } .map-link.google:hover { background: #F0F4FF; }
+.map-link.kakao { color: #FEE500; background: #3C1E1E; border-color: rgba(255,255,255,0.12); } .map-link.kakao:hover { background: #2a1515; }
+.map-link.tmap { color: #FF6B35; } .map-link.tmap:hover { background: #FFF5F0; }
+
+/* ── CONTACT ── */
+#contact { background: var(--charcoal); color: white; }
+#contact .section-label { color: var(--gold-light); }
+#contact .section-label::before { background: var(--gold-light); }
+#contact .section-title { color: white; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; margin-top: 4.5rem; }
+.contact-info { display: flex; flex-direction: column; gap: 2.5rem; }
+.contact-item { display: flex; gap: 1.5rem; align-items: flex-start; }
+.contact-item-icon {
+  width: 52px; height: 52px; min-width: 52px; border: 1.5px solid rgba(184,150,90,0.4); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; color: var(--gold-light);
+}
+.contact-item-label {
+  font-size: 0.8rem; font-weight: 600; letter-spacing: 0.15em; color: rgba(255,255,255,0.45);
+  text-transform: uppercase; margin-bottom: 0.5rem;
+}
+.contact-item-value { font-size: 1.05rem; color: rgba(255,255,255,0.9); font-weight: 400; line-height: 1.8; }
+.contact-item-value a { color: var(--gold-light); text-decoration: none; font-weight: 600; font-size: 1.2rem; transition: opacity 0.2s; }
+.contact-item-value a:hover { opacity: 0.8; }
+
+.contact-hours {
+  background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px; padding: 3rem;
+}
+.contact-hours h4 { font-family: 'Gowun Batang', serif; font-size: 1.25rem; font-weight: 700; color: white; margin-bottom: 2rem; }
+.hours-row {
+  display: flex; justify-content: space-between; font-size: 0.95rem; color: rgba(255,255,255,0.7);
+  padding: 0.8rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); font-weight: 400;
+}
+.hours-row:last-child { border-bottom: none; }
+.hours-row span:first-child { color: rgba(255,255,255,0.45); }
+.hours-today { color: var(--gold-light) !important; font-weight: 600 !important; }
+
+.contact-notice {
+  margin-top: 2rem; text-align: center; color: rgba(255,255,255,0.6); font-size: 0.95rem; font-weight: 400;
+  background: rgba(255,255,255,0.02); padding: 1.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.06); line-height: 1.9;
+}
+.contact-notice strong { color: var(--gold-light); font-weight: 600; }
+
+/* ── FOOTER ── */
+footer {
+  background: #0a0a0a; color: rgba(255,255,255,0.4); padding: 4rem 0; font-size: 0.9rem; font-weight: 400; border-top: 1px solid rgba(255,255,255,0.05);
+}
+.footer-inner { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 2rem; }
+.footer-logo { font-family: 'Gowun Batang', serif; font-size: 1.2rem; color: rgba(255,255,255,0.7); font-weight: 700; margin-bottom: 0.8rem; }
+.footer-logo span { color: var(--gold); }
+.footer-reg { line-height: 1.8; }
+
+/* ── FLOATING BAR (CTA) ── */
+.floating-bar {
+  position: fixed; bottom: 0; left: 0; width: 100%; min-height: var(--bar-h);
+  background: rgba(255,255,255,0.98); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 -4px 25px rgba(0,0,0,0.1); z-index: 999; display: flex; border-top: 1px solid var(--border);
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+.flt-btn {
+  flex: 1; display: flex; align-items: center; justify-content: center; flex-direction: column;
+  gap: 0.3rem; padding: 0.8rem 0.2rem; font-size: 0.85rem; font-weight: 700;
+  color: var(--charcoal); text-decoration: none; transition: background 0.2s, color 0.2s, transform 0.1s;
+  border-right: 1px solid rgba(0,0,0,0.06); -webkit-tap-highlight-color: transparent; user-select: none;
+}
+.flt-btn:last-child { border-right: none; }
+.flt-btn:active { transform: scale(0.96); background: rgba(0,0,0,0.05); }
+.flt-btn.kakao { background: #FEE500; color: #3C1E1E; }
+.flt-btn.phone:hover, .flt-btn.sms:hover { background: var(--warm-white); color: var(--gold); }
+.flt-btn.kakao:hover { background: #F4DC00; }
+.flt-icon { width: 22px; height: 22px; flex-shrink: 0; }
+
+/* ── SCROLL REVEAL (애니메이션) ── */
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+
+/* ════════════════════════════════
+   RESPONSIVE (반응형 최적화)
+════════════════════════════════ */
+@media (min-width: 769px) {
+  body { padding-bottom: 0; }
+  .flt-btn { flex-direction: row; font-size: 0.95rem; gap: 0.6rem; padding: 1.2rem 3rem; }
+  .floating-bar {
+    bottom: 30px; left: 50%; transform: translateX(-50%); width: auto; min-height: auto;
+    border-radius: 50px; border: 1px solid var(--border); overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.16); padding-bottom: 0;
+  }
+}
+
+@media (max-width: 1100px) {
+  nav { padding: 1rem 1.8rem; }
+  .nav-links { gap: 1.5rem; }
+  .hero-left { padding: 4rem 2.5rem 4rem 3.5rem; }
+  .why-content { padding: 4rem; }
+  .why-quote { font-size: 2rem; }
+}
+
+@media (max-width: 768px) {
+  .nav-links, .nav-cta { display: none; }
+  .hamburger { display: flex; }
+  #hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-left { padding: 4rem 1.5rem 3rem; }
+  .hero-right { min-height: 400px; }
+  .hero-greeting { min-height: 400px; padding: 3rem 2rem; }
+  .greeting-quote { font-size: 1.8rem; }
   section { padding: 5rem 0; }
-  .container { max-width: 1200px; margin: 0 auto; padding: 0 2.5rem; }
-  .section-label {
-    font-size: 0.68rem; font-weight: 500; letter-spacing: 0.22em;
-    color: var(--gold); text-transform: uppercase;
-    display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.8rem;
-  }
-  .section-label::before { content:''; display:block; width:1.8rem; height:1px; background:var(--gold); }
-  .section-title {
-    font-family: 'Noto Serif KR', serif;
-    font-size: clamp(1.6rem, 2.8vw, 2.4rem);
-    font-weight: 300; line-height: 1.4; color: var(--dark);
-  }
-  .section-title strong { font-weight: 700; }
+  .container { padding: 0 1.5rem; }
+  .services-grid { grid-template-columns: 1fr; margin-top: 3rem; }
+  .service-card { padding: 3rem 2rem; }
+  #why { grid-template-columns: 1fr; }
+  .why-visual { min-height: 300px; }
+  .why-quote { font-size: 1.8rem; }
+  .why-content { padding: 4rem 1.5rem; }
+  .gallery-coming { padding: 3.5rem 1.2rem; }
+  .gallery-coming-desc br { display: none; }
+  .prop-iframe-wrap iframe { height: 60vh; min-height: 400px; }
+  .area-grid { grid-template-columns: 1fr; gap: 3.5rem; }
+  .map-frame-wrap iframe { height: 280px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 3.5rem; margin-top: 3rem; }
+  .contact-hours { padding: 2.5rem 1.5rem; }
+  .footer-inner { flex-direction: column; align-items: flex-start; }
+}
 
-  /* ── SERVICES ── */
-  #services { background: var(--ivory); }
-  .services-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 1.5px; margin-top: 3.5rem;
-    background: var(--border); border: 1px solid var(--border);
-  }
-  .service-card {
-    background: var(--warm-white); padding: 2.5rem 2rem;
-    position: relative; overflow: hidden; transition: background 0.3s;
-  }
-  .service-card::before {
-    content: ''; position: absolute;
-    bottom: 0; left: 0; right: 0; height: 3px;
-    background: var(--gold); transform: scaleX(0); transform-origin: left;
-    transition: transform 0.4s;
-  }
-  .service-card:hover::before { transform: scaleX(1); }
-  .service-card:hover { background: var(--gold-pale); }
-  .service-icon { font-size: 2rem; margin-bottom: 1.2rem; display: block; }
-  .service-num {
-    position: absolute; top: 1.5rem; right: 1.5rem;
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem; font-weight: 700;
-    color: rgba(184,150,90,0.07); line-height: 1; user-select: none;
-  }
-  .service-name {
-    font-family: 'Noto Serif KR', serif;
-    font-size: 1.05rem; font-weight: 600; color: var(--dark); margin-bottom: 0.8rem;
-  }
-  .service-desc { font-size: 0.85rem; color: var(--text-mid); line-height: 1.9; font-weight: 300; }
+@media (max-width: 480px) {
+  .hero-title { font-size: 1.9rem; }
+  .hero-desc { font-size: 1rem; }
+  .section-title { font-size: 1.7rem; }
+  .hero-stats { gap: 1.8rem; }
+  .prop-iframe-wrap iframe { height: 480px; }
+  .map-links { grid-template-columns: 1fr 1fr; }
+}
 
-  /* ── WHY ── */
-  #why { display: grid; grid-template-columns: 1fr 1fr; padding: 0; }
-  .why-visual {
-    background: linear-gradient(145deg, #2C3E2D 0%, #4A6650 50%, #5C7A60 100%);
-    position: relative; overflow: hidden;
-    display: flex; align-items: center; justify-content: center; min-height: 460px;
-  }
-  .why-visual::after {
-    content:''; position:absolute; inset:0;
-    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
-  }
-  .why-visual-content { position:relative; z-index:2; padding:3rem; text-align:center; color:white; }
-  .why-quote { font-family:'Playfair Display',serif; font-size:1.8rem; font-style:italic; line-height:1.5; opacity:0.9; margin-bottom:1rem; }
-  .why-quote-author { font-size:0.72rem; letter-spacing:0.14em; opacity:0.45; text-transform:uppercase; }
-  .why-content { padding: 4rem; display:flex; flex-direction:column; justify-content:center; }
-  .why-list { margin-top:2.5rem; display:flex; flex-direction:column; gap:1.8rem; }
-  .why-item { display:flex; gap:1.2rem; align-items:flex-start; }
-  .why-item-icon {
-    width:42px; height:42px; min-width:42px;
-    background:var(--gold-pale); border-radius:50%;
-    display:flex; align-items:center; justify-content:center; font-size:1rem;
-  }
-  .why-item-text h4 { font-family:'Noto Serif KR',serif; font-size:0.95rem; font-weight:600; color:var(--dark); margin-bottom:0.35rem; }
-  .why-item-text p { font-size:0.83rem; color:var(--text-mid); font-weight:300; line-height:1.8; }
+@media (max-width: 360px) {
+  .hero-title { font-size: 1.75rem; }
+  .consult-icon-btn { width: 50px; height: 50px; font-size: 1.3rem; }
+  .flt-btn { font-size: 0.75rem; padding: 0.6rem 0.1rem; }
+  .flt-icon { width: 18px; height: 18px; }
+}
 
-  /* ── PROPERTIES (iframe 연동) ── */
-  #properties { background: var(--warm-white); }
-  .prop-header { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:3rem; flex-wrap:wrap; gap:1rem; }
-  .prop-iframe-wrap {
-    border: 1px solid var(--border); border-radius: 6px;
-    overflow: hidden; background: white;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.07);
-  }
-  .prop-iframe-header {
-    background: var(--charcoal); padding: 0.9rem 1.5rem;
-    display: flex; align-items: center; gap: 0.8rem;
-  }
-  .prop-iframe-header-text { font-size:0.75rem; color:rgba(255,255,255,0.55); }
-  .prop-iframe-header-name { font-family:'Noto Serif KR',serif; font-size:0.9rem; color:white; font-weight:600; }
-  .prop-iframe-wrap iframe {
-    width: 100%; height: 700px; border: none; display: block;
-  }
-  .prop-iframe-footer {
-    padding: 1rem 1.5rem; background: var(--ivory);
-    border-top: 1px solid var(--border);
-    display: flex; align-items: center; justify-content: space-between;
-    flex-wrap: wrap; gap: 0.8rem;
-  }
-  .prop-iframe-footer p { font-size:0.78rem; color:var(--text-light); }
-  .prop-iframe-link {
-    font-size:0.78rem; color:var(--gold); text-decoration:none; font-weight:500;
-    display:flex; align-items:center; gap:0.3rem;
-  }
-  .prop-iframe-link:hover { text-decoration:underline; }
-
-  /* ── AREA ── */
-  #area { background: var(--ivory); }
-  .area-grid { display:grid; grid-template-columns:1fr 1.3fr; gap:4rem; align-items:start; margin-top:3.5rem; }
-  .area-text p { font-size:0.88rem; color:var(--text-mid); line-height:2; font-weight:300; margin-bottom:1.2rem; }
-  .area-highlight {
-    background:white; border-left:3px solid var(--gold);
-    padding:1.3rem 1.8rem; margin-top:0.8rem; border-radius:0 4px 4px 0;
-  }
-  .area-highlight h4 { font-family:'Noto Serif KR',serif; font-weight:600; font-size:0.92rem; margin-bottom:0.8rem; color:var(--dark); }
-  .area-list { list-style:none; display:flex; flex-direction:column; gap:0.45rem; }
-  .area-list li { font-size:0.8rem; color:var(--text-mid); font-weight:300; display:flex; align-items:center; gap:0.55rem; }
-  .area-list li::before { content:''; display:inline-block; width:5px; height:5px; border-radius:50%; background:var(--gold); flex-shrink:0; }
-
-  /* Map block */
-  .area-map-wrap { border-radius:6px; overflow:hidden; box-shadow:0 16px 50px rgba(0,0,0,0.1); border:1px solid var(--border); }
-  .map-header { background:var(--charcoal); padding:1rem 1.4rem; display:flex; align-items:center; gap:0.8rem; }
-  .map-header-text { font-size:0.72rem; color:rgba(255,255,255,0.45); }
-  .map-header-name { font-family:'Noto Serif KR',serif; font-size:0.9rem; color:white; font-weight:600; }
-  .map-frame-wrap iframe { width:100%; height:300px; border:none; display:block; }
-
-  /* 4-map link grid */
-  .map-links { display:grid; grid-template-columns:1fr 1fr; }
-  .map-link {
-    padding: 0.9rem 0.5rem; text-align:center;
-    font-size:0.75rem; font-weight:500; text-decoration:none;
-    display:flex; align-items:center; justify-content:center; gap:0.4rem;
-    transition:background 0.2s; border:1px solid var(--border);
-    border-top: none; background: white;
-  }
-  .map-link:nth-child(odd) { border-right: none; }
-  .map-link:nth-child(1), .map-link:nth-child(2) { border-bottom: none; }
-  .map-link.naver   { color:#03C75A; }
-  .map-link.naver:hover   { background:#F0FFF6; }
-  .map-link.google  { color:#4285F4; }
-  .map-link.google:hover  { background:#F0F4FF; }
-  .map-link.kakao   { color:#FEE500; background:#3C1E1E; }
-  .map-link.kakao:hover   { background:#2a1515; }
-  .map-link.tmap    { color:#FF6B35; }
-  .map-link.tmap:hover    { background:#FFF5F0; }
-
-  /* Map icon SVGs */
-  .map-icon-img { width:18px; height:18px; object-fit:contain; }
-
-  /* ── CONTACT ── */
-  #contact { background:var(--charcoal); color:white; }
-  #contact .section-label { color:var(--gold-light); }
-  #contact .section-label::before { background:var(--gold-light); }
-  #contact .section-title { color:white; }
-  .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; margin-top:3.5rem; }
-  .contact-info { display:flex; flex-direction:column; gap:1.8rem; }
-  .contact-item { display:flex; gap:1.1rem; align-items:flex-start; }
-  .contact-item-icon {
-    width:40px; height:40px; min-width:40px;
-    border:1px solid rgba(184,150,90,0.4); border-radius:50%;
-    display:flex; align-items:center; justify-content:center; font-size:1rem; color:var(--gold-light);
-  }
-  .contact-item-label { font-size:0.68rem; letter-spacing:0.13em; color:rgba(255,255,255,0.38); text-transform:uppercase; margin-bottom:0.25rem; }
-  .contact-item-value { font-size:0.92rem; color:rgba(255,255,255,0.88); font-weight:300; line-height:1.7; }
-  .contact-item-value a { color:var(--gold-light); text-decoration:none; font-weight:500; font-size:1.1rem; }
-  .contact-hours { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:4px; padding:1.8rem; }
-  .contact-hours h4 { font-family:'Noto Serif KR',serif; font-size:0.95rem; font-weight:600; color:white; margin-bottom:1rem; }
-  .hours-row { display:flex; justify-content:space-between; font-size:0.8rem; color:rgba(255,255,255,0.55); padding:0.45rem 0; border-bottom:1px solid rgba(255,255,255,0.06); font-weight:300; }
-  .hours-row:last-child { border-bottom:none; }
-  .hours-row span:first-child { color:rgba(255,255,255,0.35); }
-  .hours-today { color:var(--gold-light) !important; font-weight:500 !important; }
-  .contact-form { display:flex; flex-direction:column; gap:0.9rem; }
-  .form-row { display:grid; grid-template-columns:1fr 1fr; gap:0.9rem; }
-  .form-group { display:flex; flex-direction:column; gap:0.35rem; }
-  .form-label { font-size:0.68rem; letter-spacing:0.1em; color:rgba(255,255,255,0.38); text-transform:uppercase; }
-  .form-input, .form-select, .form-textarea {
-    background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1);
-    border-radius:2px; padding:0.7rem 0.9rem; color:white;
-    font-size:0.86rem; font-family:'Noto Sans KR',sans-serif;
-    transition:border-color 0.2s; outline:none; resize:none;
-  }
-  .form-input::placeholder, .form-textarea::placeholder { color:rgba(255,255,255,0.2); }
-  .form-input:focus, .form-textarea:focus { border-color:var(--gold); }
-  .form-select { color:rgba(255,255,255,0.65); }
-  .form-select option { background:var(--charcoal); }
-  .form-textarea { height:100px; }
-  .form-submit {
-    padding:0.95rem 2rem; background:var(--gold); color:white;
-    border:none; border-radius:2px; cursor:pointer;
-    font-size:0.82rem; font-weight:500; letter-spacing:0.07em;
-    font-family:'Noto Sans KR',sans-serif; transition:all 0.25s; margin-top:0.3rem;
-    display:flex; align-items:center; justify-content:center; gap:0.4rem;
-  }
-  .form-submit:hover { background:#9A7A45; transform:translateY(-1px); box-shadow:0 8px 24px rgba(184,150,90,0.4); }
-
-  /* ── FOOTER ── */
-  footer {
-    background:var(--dark); color:rgba(255,255,255,0.38);
-    padding:2.2rem 0; font-size:0.75rem; font-weight:300;
-    border-top:1px solid rgba(255,255,255,0.05);
-  }
-  .footer-inner { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; }
-  .footer-logo { font-family:'Noto Serif KR',serif; font-size:0.9rem; color:rgba(255,255,255,0.6); font-weight:600; margin-bottom:0.3rem; }
-  .footer-logo span { color:var(--gold); }
-
-  /* ── SCROLL REVEAL ── */
-  .reveal { opacity:0; transform:translateY(22px); transition:opacity 0.7s ease, transform 0.7s ease; }
-  .reveal.visible { opacity:1; transform:none; }
-  .reveal-delay-1 { transition-delay:0.1s; }
-  .reveal-delay-2 { transition-delay:0.2s; }
-
-  /* ── MOBILE RESPONSIVE ── */
-  @media (max-width: 1024px) {
-    nav { padding: 1rem 1.5rem; }
-    .nav-links { gap: 1.5rem; }
-    .hero-left { padding: 3.5rem 2.5rem 3.5rem 3.5rem; }
-    .why-content { padding: 3rem; }
-  }
-
-  @media (max-width: 768px) {
-    /* Nav */
-    .nav-links, .nav-cta { display: none; }
-    .hamburger { display: flex; }
-
-    /* Hero */
-    #hero { grid-template-columns: 1fr; min-height: auto; }
-    .hero-left { padding: 3rem 1.5rem 2.5rem; }
-    .hero-right { min-height: 260px; }
-    .hero-visual { min-height: 260px; }
-    .hero-tag { display: none; }
-    .hero-stats { gap: 1.5rem; margin-top: 2rem; padding-top: 2rem; }
-    .hero-stat-num { font-size: 1.6rem; }
-
-    /* Sections */
-    section { padding: 3.5rem 0; }
-    .container { padding: 0 1.2rem; }
-
-    /* Services */
-    .services-grid { grid-template-columns: 1fr; }
-    .service-card { padding: 2rem 1.5rem; }
-
-    /* Why */
-    #why { grid-template-columns: 1fr; }
-    .why-visual { min-height: 220px; }
-    .why-quote { font-size: 1.3rem; }
-    .why-content { padding: 2.5rem 1.5rem; }
-
-    /* Properties iframe */
-    .prop-iframe-wrap iframe { height: 550px; }
-
-    /* Area */
-    .area-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    .map-frame-wrap iframe { height: 240px; }
-
-    /* Contact */
-    .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    .form-row { grid-template-columns: 1fr; }
-
-    /* Footer */
-    .footer-inner { flex-direction: column; align-items: flex-start; }
-  }
-
-  @media (max-width: 480px) {
-    .hero-title { font-size: 1.7rem; }
-    .hero-desc { font-size: 0.85rem; }
-    .btn-primary, .btn-outline { padding: 0.8rem 1.5rem; font-size: 0.78rem; }
-    .section-title { font-size: 1.5rem; }
-    .hero-buttons { flex-direction: column; }
-    .hero-buttons a { text-align: center; justify-content: center; }
-    .prop-iframe-wrap iframe { height: 480px; }
-    .map-links { grid-template-columns: 1fr 1fr; }
-  }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
 </style>
 </head>
 <body>
 
-<!-- NAVIGATION -->
 <nav id="mainNav">
   <a href="#" class="nav-logo">미소<span>공인중개사</span>사무소</a>
   <ul class="nav-links">
     <li><a href="#services">서비스</a></li>
     <li><a href="#why">차별점</a></li>
+    <li><a href="#gallery">갤러리</a></li>
     <li><a href="#properties">매물</a></li>
+    <li><a href="#calculator">계산기</a></li>
     <li><a href="#area">위치안내</a></li>
     <li><a href="#contact">상담문의</a></li>
   </ul>
-  <a href="tel:010-0000-0000" class="nav-cta">📞 상담 전화</a>
-  <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+  <a href="tel:010-2714-4399" class="nav-cta">📞 상담 전화</a>
+  <button class="hamburger" id="hamburger" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobileMenu">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
+<div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="모바일 메뉴">
   <a href="#services" onclick="closeMenu()">🏠 서비스 안내</a>
   <a href="#why" onclick="closeMenu()">✨ 미소의 차별점</a>
+  <a href="#gallery" onclick="closeMenu()">📸 갤러리</a>
   <a href="#properties" onclick="closeMenu()">🏢 매물 보기</a>
+  <a href="#calculator" onclick="closeMenu()">🧮 세금 계산기</a>
   <a href="#area" onclick="closeMenu()">📍 위치 안내</a>
   <a href="#contact" onclick="closeMenu()">💬 상담 문의</a>
-  <a href="tel:010-0000-0000" class="m-cta">📞 바로 전화하기</a>
 </div>
 
-<!-- HERO -->
 <section id="hero">
   <div class="hero-left">
     <div class="hero-eyebrow">서울숲 · 성동구 부동산</div>
     <h1 class="hero-title">
-      당신의 새 보금자리를<br>
-      <strong>함께 찾겠습니다</strong>
-      <em>미소</em>로
+      당신의 새로운 내일이 시작될 곳,<br>
+      <strong><span class="highlight">정성을 다해 찾겠습니다</span></strong>
+      <em>미소</em>와 함께
     </h1>
     <p class="hero-desc">
-      서울숲 인근 지역 전문 공인중개사.<br>
-      매매·전세·월세, 아파트·오피스텔·상가까지<br>
-      신뢰와 투명함으로 최선의 거래를 이끌어 드립니다.
+      학창 시절부터 추억을 쌓아온 성동구의 가치를 가장 잘 아는 전문 중개사입니다.<br>
+      주거부터 상업용 부동산까지, 변함없는 정직함과<br>
+      깊이 있는 전문성으로 가장 안전하고 성공적인 거래를 약속합니다.
     </p>
-    <div class="hero-buttons">
-      <a href="#contact" class="btn-primary">🏠 무료 상담 신청</a>
-      <a href="#properties" class="btn-outline">매물 보기 →</a>
-    </div>
-    <div class="hero-stats">
-      <div>
-        <div class="hero-stat-num">20+</div>
-        <div class="hero-stat-label">년 지역 경력</div>
-      </div>
-      <div>
-        <div class="hero-stat-num">500+</div>
-        <div class="hero-stat-label">성공 거래 건수</div>
-      </div>
-      <div>
-        <div class="hero-stat-num">98%</div>
-        <div class="hero-stat-label">고객 만족도</div>
-      </div>
-    </div>
-  </div>
-  <div class="hero-right">
-    <div class="hero-visual">
-      <div class="hero-visual-inner">
-        <div class="hero-visual-badge">🏙️</div>
-        <div class="hero-visual-text">서울숲 리버뷰자이</div>
-        <div class="hero-visual-sub">Seoul Forest · Seongdong-gu</div>
-      </div>
-    </div>
-    <div class="hero-tag">
-      <div class="hero-tag-label">LOCATION</div>
-      <div class="hero-tag-value">서울숲리버뷰자이아파트 상가</div>
-    </div>
-  </div>
-</section>
 
-<!-- SERVICES -->
-<section id="services">
-  <div class="container">
-    <div class="section-label reveal">SERVICES</div>
-    <h2 class="section-title reveal reveal-delay-1"><strong>다양한 부동산 서비스</strong>를<br>한 곳에서 해결하세요</h2>
-    <div class="services-grid">
-      <div class="service-card reveal">
-        <span class="service-num">01</span>
-        <span class="service-icon">🏢</span>
-        <div class="service-name">아파트 매매</div>
-        <p class="service-desc">서울숲·응봉·성수·금호·옥수 일대 아파트 매매 전문. 시세 분석부터 계약까지 안전하게 진행합니다.</p>
-      </div>
-      <div class="service-card reveal reveal-delay-1">
-        <span class="service-num">02</span>
-        <span class="service-icon">🔑</span>
-        <div class="service-name">전·월세 임대차</div>
-        <p class="service-desc">전세사기 예방을 위한 등기부 확인부터 확정일자·전입신고 안내까지 임차인 권리 보호를 최우선으로 합니다.</p>
-      </div>
-      <div class="service-card reveal reveal-delay-2">
-        <span class="service-num">03</span>
-        <span class="service-icon">🏪</span>
-        <div class="service-name">상가·오피스텔</div>
-        <p class="service-desc">상가 권리금·임대차 분석, 오피스텔 수익률 계산 등 투자 목적 상업용 부동산도 꼼꼼히 안내해 드립니다.</p>
-      </div>
-      <div class="service-card reveal">
-        <span class="service-num">04</span>
-        <span class="service-icon">📋</span>
-        <div class="service-name">부동산 컨설팅</div>
-        <p class="service-desc">취득세·양도세·종부세 절세 전략, 대출 가능 금액 분석 등 매수 전 종합적인 재무 컨설팅을 제공합니다.</p>
-      </div>
-      <div class="service-card reveal reveal-delay-1">
-        <span class="service-num">05</span>
-        <span class="service-icon">📝</span>
-        <div class="service-name">계약서 검토</div>
-        <p class="service-desc">특약사항 작성, 계약금·잔금 일정 조율, 공인중개사의 설명의무 이행으로 분쟁 없는 거래를 만들어 드립니다.</p>
-      </div>
-      <div class="service-card reveal reveal-delay-2">
-        <span class="service-num">06</span>
-        <span class="service-icon">🤝</span>
-        <div class="service-name">사후 관리</div>
-        <p class="service-desc">계약 이후 이사·인테리어 연결, 하자 분쟁 중재, 재계약 시점 알림까지 거래 완료 후에도 함께합니다.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY US -->
-<section id="why" style="padding:0;">
-  <div class="why-visual">
-    <div class="why-visual-content reveal">
-      <div class="why-quote">"집 한 채가<br>인생을 바꿉니다"</div>
-      <div class="why-quote-author">— 미소공인중개사사무소 대표</div>
-    </div>
-  </div>
-  <div class="why-content">
-    <div class="section-label reveal">WHY MISO</div>
-    <h2 class="section-title reveal reveal-delay-1">미소를 선택하는<br><strong>이유가 있습니다</strong></h2>
-    <div class="why-list">
-      <div class="why-item reveal">
-        <div class="why-item-icon">📍</div>
-        <div class="why-item-text">
-          <h4>지역 최고의 현장 전문성</h4>
-          <p>서울숲리버뷰자이 상가 위치로 성동구 시세 변화를 가장 빠르게 파악합니다. 단지별 특성과 가격 흐름을 누구보다 잘 압니다.</p>
-        </div>
-      </div>
-      <div class="why-item reveal reveal-delay-1">
-        <div class="why-item-icon">🔒</div>
-        <div class="why-item-text">
-          <h4>안전한 거래, 철저한 서류 검토</h4>
-          <p>등기부등본·건축물대장·토지이용계획 확인, 근저당·가압류 분석까지 고객의 권리를 지키는 꼼꼼한 서류 검토를 기본으로 합니다.</p>
-        </div>
-      </div>
-      <div class="why-item reveal reveal-delay-2">
-        <div class="why-item-icon">💬</div>
-        <div class="why-item-text">
-          <h4>투명한 소통, 정직한 중개</h4>
-          <p>중개보수는 법정 요율대로, 숨겨진 비용 없이. 매물의 장단점을 솔직하게 알려드리고 고객이 올바른 판단을 내릴 수 있도록 돕습니다.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROPERTIES (asil.kr iframe 연동) -->
-<section id="properties">
-  <div class="container">
-    <div class="prop-header">
-      <div>
-        <div class="section-label reveal">LISTINGS</div>
-        <h2 class="section-title reveal reveal-delay-1">실시간 <strong>매물 안내</strong></h2>
-      </div>
-      <a href="https://asil.kr/app/agent_intro.jsp?member=V23207" target="_blank" rel="noopener"
-         style="font-size:0.8rem; color:var(--gold); text-decoration:none; font-weight:500; display:flex; align-items:center; gap:0.3rem;">
-        전체 매물 보기 →
-      </a>
-    </div>
-
-    <div class="prop-iframe-wrap reveal">
-      <div class="prop-iframe-header">
-        <span style="font-size:1.1rem;">🏠</span>
-        <div>
-          <div class="prop-iframe-header-text">실시간 연동 매물 목록</div>
-          <div class="prop-iframe-header-name">미소공인중개사사무소</div>
-        </div>
-      </div>
-      <iframe
-        src="https://asil.kr/app/agent_intro.jsp?member=V23207"
-        title="미소공인중개사사무소 매물 목록"
-        loading="lazy"
-        allowfullscreen
-        sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
-      ></iframe>
-      <div class="prop-iframe-footer">
-        <p>📌 매물 정보는 실시간으로 업데이트됩니다. 상세 문의는 전화 또는 방문 상담을 이용해 주세요.</p>
-        <a href="https://asil.kr/app/agent_intro.jsp?member=V23207" target="_blank" rel="noopener" class="prop-iframe-link">
-          🔗 새 창에서 보기
+    <div>
+      <span class="hero-consult-label">즉시 상담</span>
+      <div class="hero-consult-icons">
+        <a href="tel:010-2714-4399" class="consult-icon-btn call" title="전화 상담" aria-label="전화 상담">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l1.84-1.84a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </a>
+        <a href="https://open.kakao.com/o/slF2Lkpi" target="_blank" rel="noopener noreferrer" class="consult-icon-btn kakao" title="카카오톡 상담" aria-label="카카오톡 상담">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 3c5.523 0 10 3.582 10 8s-4.477 8-10 8c-1.156 0-2.264-.173-3.29-.487l-3.793 2.053a.5.5 0 0 1-.741-.564l1.01-3.52C3.805 14.863 2 11.644 2 11c0-4.418 4.477-8 10-8z" fill="#3C1E1E"/></svg>
+        </a>
+        <a href="sms:010-2714-4399" class="consult-icon-btn sms" title="문자 상담" aria-label="문자 상담">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         </a>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- AREA INFO -->
-<section id="area">
-  <div class="container">
-    <div class="section-label reveal">LOCATION</div>
-    <h2 class="section-title reveal reveal-delay-1">서울숲·성동구<br><strong>위치 안내</strong></h2>
-    <div class="area-grid">
-      <div class="area-text reveal">
-        <p>성동구는 서울 동부의 핵심 주거·상업 지역으로, 서울숲 개장 이후 급격한 발전을 이루어 왔습니다. 한강 조망, 녹지, 교통의 3박자를 갖춘 서울의 대표적인 주거 선호 지역입니다.</p>
-        <p>최근 성수동 도시재생 사업 및 서울숲 일대 재개발로 부동산 가치가 꾸준히 상승하고 있으며, 2호선·수인분당선 등 광역 교통망도 우수합니다.</p>
-        <div class="area-highlight">
-          <h4>🌿 서울숲 인근 주요 인프라</h4>
-          <ul class="area-list">
-            <li>서울숲공원 (한강 수변 산책·레저)</li>
-            <li>수인분당선 서울숲역 (도보권)</li>
-            <li>지하철 2호선 뚝섬역·성수역 인근</li>
-            <li>성동구청·세무서 등 관공서 밀집</li>
-            <li>서울숲 카페거리·문화시설</li>
-            <li>한양대학교 부속병원 접근 용이</li>
-          </ul>
-        </div>
+    <div>
+      <span class="hero-consult-label">SNS 채널</span>
+      <div class="hero-consult-icons">
+        <a href="https://blog.naver.com/miso_realty" target="_blank" rel="noopener noreferrer" class="consult-icon-btn sns-naver" title="네이버 블로그" aria-label="네이버 블로그">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M16.273 12.845L7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727z" fill="white"/></svg>
+        </a>
+        <a href="https://www.instagram.com/miso_realty" target="_blank" rel="noopener noreferrer" class="consult-icon-btn sns-instagram" title="인스타그램" aria-label="인스타그램">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5.5" stroke="white" stroke-width="2"/><circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="white"/></svg>
+        </a>
+        <a href="https://youtube.com/@misorealtytv?si=J4NmPFCvkDuyME9E" target="_blank" rel="noopener noreferrer" class="consult-icon-btn sns-youtube" title="유튜브" aria-label="유튜브">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" fill="white" fill-opacity="0.25"/><polygon points="9.75,15.02 15.5,12 9.75,8.98 9.75,15.02" fill="white"/></svg>
+        </a>
       </div>
+    </div>
 
-      <div class="reveal reveal-delay-1">
-        <div class="area-map-wrap">
-          <div class="map-header">
-            <span style="font-size:1.1rem;">📍</span>
-            <div>
-              <div class="map-header-text">사무소 위치</div>
-              <div class="map-header-name">미소공인중개사사무소</div>
-            </div>
-          </div>
-          <div class="map-frame-wrap">
-            <iframe
-              src="https://map.naver.com/p/entry/place/1243748367"
-              title="미소공인중개사사무소 네이버 지도"
-              allowfullscreen loading="lazy"
-            ></iframe>
-          </div>
+    <div class="hero-buttons">
+      <a href="#properties" class="btn-outline">🏠 매물 둘러보기 →</a>
+      <a href="#calculator" class="btn-outline">🧮 세금 계산기 →</a>
+    </div>
 
-          <!-- 4대 지도 서비스 링크 -->
-          <div class="map-links">
-            <!-- 네이버 지도 -->
-            <a href="https://map.naver.com/p/entry/place/1243748367"
-               target="_blank" rel="noopener" class="map-link naver">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                <rect width="24" height="24" rx="4" fill="#03C75A"/>
-                <path d="M13.6 12.4L10.2 7H7v10h3.4v-5.4L14.8 17H18V7h-3.4v5.4z" fill="white"/>
-              </svg>
-              네이버 지도
-            </a>
-            <!-- 구글 지도 -->
-            <a href="https://maps.app.goo.gl/X3Hk238raQwkVXfNA"
-               target="_blank" rel="noopener" class="map-link google">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#4285F4"/>
-              </svg>
-              구글 지도
-            </a>
-            <!-- 카카오 지도 -->
-            <a href="https://map.kakao.com/?itemId=318883610"
-               target="_blank" rel="noopener" class="map-link kakao">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                <ellipse cx="12" cy="10" rx="9" ry="7.5" fill="#FEE500"/>
-                <path d="M8.5 13l1.2-3.5h4.6L15.5 13" stroke="#3C1E1E" stroke-width="1.2" fill="none"/>
-                <circle cx="9.5" cy="9.5" r="1" fill="#3C1E1E"/>
-                <circle cx="14.5" cy="9.5" r="1" fill="#3C1E1E"/>
-                <path d="M10 11.5c0.5 0.5 3.5 0.5 4 0" stroke="#3C1E1E" stroke-width="1" fill="none" stroke-linecap="round"/>
-                <path d="M9 16l1-3" stroke="#FEE500" stroke-width="2.5" stroke-linecap="round"/>
-              </svg>
-              카카오 지도
-            </a>
-            <!-- 티맵 -->
-            <a href="https://poi.tmobiweb.com/app/share/position?contents=dHlwZT0yJnBrZXk9MTE2NzQ0MzQwMSZwb2lJZD0xMTY3NDQzNCZuYXZTZXE9MSZwb2lOYW1lPeuvuOyGjOqzteyduOykkeqwnOyCrOyCrOustOyGjCZjZW50ZXJYPTAmY2VudGVyWT0wJnRpbWU9MjAyNeuFhCA57JuUIDfsnbwgMTg6MzgmdGVsPTAyLTIyODItNjY2MSZhZGRyPeyEnOyauCDshLHrj5nqtawg6rOg7IKw7J6Q66GcMuq4uCA2Nw==&tailParam=%7B%7D"
-               target="_blank" rel="noopener" class="map-link tmap">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                <rect width="24" height="24" rx="4" fill="#FF6B35"/>
-                <path d="M12 4C8.69 4 6 6.69 6 10c0 4.5 6 10 6 10s6-5.5 6-10c0-3.31-2.69-6-6-6zm0 8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" fill="white"/>
-                <path d="M8 5.5h8" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-              T맵
-            </a>
-          </div>
+    <div class="hero-stats">
+      <div><div class="hero-stat-num">99%</div><div class="hero-stat-label">고객 만족도</div></div>
+      <div><div class="hero-stat-num">100%</div><div class="hero-stat-label">성실한 중개</div></div>
+      <div><div class="hero-stat-num">100%</div><div class="hero-stat-label">투명한 거래</div></div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-greeting">
+      <div class="hero-greeting-inner">
+        <div class="greeting-badge">Representative's Message</div>
+        <div class="greeting-quote">
+          <strong>미소가 드리는 변치 않는 약속</strong>
+          "집은 단순한 머묾의 공간을 넘어,<br>새로운 삶이 시작되는 무대이자<br>가장 소중한 자산입니다."
         </div>
-        <p style="font-size:0.76rem; color:var(--text-light); margin-top:1rem; text-align:center; line-height:1.7;">
-          서울특별시 성동구 고산자로2길 67<br>서울숲리버뷰자이아파트 상가 1동 107호
+        <p class="greeting-body">
+          고객님의 귀한 발걸음과 중대한 결정의 순간,<br>그 무게를 알기에 매 순간 진심을 다합니다.<br>서류 한 장도 허투루 넘기지 않고,<br>작은 시세 흐름도 투명하게 공유하며,<br>계약이 끝난 이후에도 든든한 조력자로 남겠습니다.
         </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="container">
-    <div class="section-label reveal">CONTACT</div>
-    <h2 class="section-title reveal reveal-delay-1">언제든 편하게<br><strong>상담 문의</strong>하세요</h2>
-    <div class="contact-grid">
-      <div>
-        <div class="contact-info">
-          <div class="contact-item reveal">
-            <div class="contact-item-icon">📞</div>
-            <div>
-              <div class="contact-item-label">대표 전화</div>
-              <div class="contact-item-value"><a href="tel:010-0000-0000">010-0000-0000</a></div>
-            </div>
+        <div class="greeting-sig">
+          <div class="greeting-sig-bar"></div>
+          <div>
+            <div class="greeting-sig-name">대표 이주영</div>
+            <div class="greeting-sig-title">미소공인중개사사무소</div>
           </div>
-          <div class="contact-item reveal reveal-delay-1">
-            <div class="contact-item-icon">📍</div>
-            <div>
-              <div class="contact-item-label">사무소 주소</div>
-              <div class="contact-item-value">서울특별시 성동구 고산자로2길 67<br>서울숲리버뷰자이아파트 상가 1동 107호</div>
-            </div>
-          </div>
-          <div class="contact-item reveal reveal-delay-2">
-            <div class="contact-item-icon">🚇</div>
-            <div>
-              <div class="contact-item-label">교통 안내</div>
-              <div class="contact-item-value">수인분당선 서울숲역 인근<br>2호선 뚝섬역 도보 이용 가능</div>
-            </div>
-          </div>
-        </div>
-        <div class="contact-hours reveal" style="margin-top:2rem;">
-          <h4>⏰ 운영 시간</h4>
-          <div class="hours-row">
-            <span>월요일 – 금요일</span>
-            <span class="hours-today">09:00 – 19:00</span>
-          </div>
-          <div class="hours-row">
-            <span>토요일</span>
-            <span>09:00 – 17:00</span>
-          </div>
-          <div class="hours-row">
-            <span>일요일·공휴일</span>
-            <span>사전 예약 시 상담 가능</span>
-          </div>
-        </div>
-      </div>
-      <div class="reveal reveal-delay-1">
-        <div class="contact-form">
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label">성함</label>
-              <input type="text" class="form-input" placeholder="홍길동">
-            </div>
-            <div class="form-group">
-              <label class="form-label">연락처</label>
-              <input type="tel" class="form-input" placeholder="010-0000-0000">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label">상담 유형</label>
-            <select class="form-select form-input">
-              <option value="">상담 유형을 선택해주세요</option>
-              <option>아파트 매매</option>
-              <option>아파트 전세</option>
-              <option>아파트 월세</option>
-              <option>오피스텔 임대</option>
-              <option>상가·사무실</option>
-              <option>기타 문의</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label">희망 지역 / 예산</label>
-            <input type="text" class="form-input" placeholder="예) 성수동, 예산 5억 이하">
-          </div>
-          <div class="form-group">
-            <label class="form-label">문의 내용</label>
-            <textarea class="form-textarea" placeholder="궁금하신 점을 자유롭게 적어주세요."></textarea>
-          </div>
-          <button type="button" class="form-submit" onclick="submitForm()">
-            ✉️ 상담 신청하기
-          </button>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
+<section id="services">
   <div class="container">
-    <div class="footer-inner">
-      <div>
-        <div class="footer-logo">미소<span>공인중개사</span>사무소</div>
-        <div>서울특별시 성동구 고산자로2길 67 서울숲리버뷰자이아파트 상가 1동 107호<br>
-        공인중개사 등록번호 : 서울성동-2025-XXXXX | 대표 : 홍길동</div>
+    <div class="section-label reveal">SERVICES</div>
+    <h2 class="section-title reveal reveal-delay-1"><strong><span class="highlight">깊이 있는 부동산 종합 서비스</span></strong>를<br>한자리에서 편안하게 경험하세요</h2>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <span class="service-num">01</span><span class="service-icon">🏢</span>
+        <div class="service-name">아파트 매매</div>
+        <p class="service-desc">성동구 핵심 지역의 아파트 매매를 전문으로 다룹니다. 정밀한 시세 분석과 권리 분석을 바탕으로 가장 안전하고 만족스러운 계약을 이끌어냅니다.</p>
       </div>
-      <div style="text-align:right;">
-        <div>© 2025 미소공인중개사사무소. All rights reserved.</div>
-        <div style="margin-top:0.3rem;">개인정보처리방침 | 이용약관</div>
+      <div class="service-card reveal reveal-delay-1">
+        <span class="service-num">02</span><span class="service-icon">🔑</span>
+        <div class="service-name">전·월세 임대차</div>
+        <p class="service-desc">소중한 보증금을 지키는 것이 최우선입니다. 철저한 등기부 확인은 물론, 확정일자와 전입신고 등 필수 절차를 꼼꼼히 안내하여 임차인의 권리를 빈틈없이 보호합니다.</p>
       </div>
-    </div>
-  </div>
-</footer>
-
-<script>
-  // Scroll reveal
-  const reveals = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-  }, { threshold: 0.1 });
-  reveals.forEach(el => io.observe(el));
-
-  // Nav shadow on scroll
-  window.addEventListener('scroll', () => {
-    document.getElementById('mainNav').style.boxShadow =
-      window.scrollY > 40 ? '0 4px 20px rgba(0,0,0,0.08)' : 'none';
-  });
-
-  // Hamburger menu
-  const ham = document.getElementById('hamburger');
-  const mob = document.getElementById('mobileMenu');
-  ham.addEventListener('click', () => {
-    ham.classList.toggle('open');
-    mob.classList.toggle('open');
-  });
-  function closeMenu() {
-    ham.classList.remove('open');
-    mob.classList.remove('open');
-  }
-  // Close menu on outside click
-  document.addEventListener('click', e => {
-    if (!ham.contains(e.target) && !mob.contains(e.target)) closeMenu();
-  });
-
-  // Form submit
-  function submitForm() {
-    alert('상담 신청이 접수되었습니다.\n빠른 시일 내에 연락 드리겠습니다.\n\n📞 급하신 분은 직접 전화 주세요: 010-0000-0000');
-  }
-</script>
-</body>
-</html>
+      <div class="service-card reveal reveal-delay-2">
+        <span class="service-num">03</span><span class="service-icon">🏪</span>
+        <div class="service-name">상가·오피스텔</div>
+        <p class="service-desc">비즈니스의 성공과 직결되는 상업용 부동산. 정확한 권리금 분석과 오피스텔 수익률 산정으로 성공적인 투자의 길잡이가 되어 드립니다.</p>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-num">
