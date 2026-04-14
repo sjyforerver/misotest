@@ -664,207 +664,29 @@ section { padding: 7rem 0; }
 .calc-breakdown tbody tr:last-child td {
   border-bottom: none;
 }
-.calc-note-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+.calc-note {
   margin-top: 1rem;
-}
-.calc-note,
-.calc-maintain {
   padding: 1rem 1.1rem;
   border-radius: 14px;
   font-size: 0.9rem;
   line-height: 1.8;
-}
-.calc-note {
   background: #fff7e8;
   border: 1px solid #f1dfbb;
   color: #6f5a34;
 }
-.calc-maintain {
-  background: #f8f6f2;
-  border: 1px solid var(--border);
-  color: var(--text-mid);
-}
-.calc-maintain strong,
 .calc-note strong {
   color: var(--dark);
 }
 
-/* ── AREA (LOCATION) ── */
-#area { background: var(--warm-white); }
-.area-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 6rem; align-items: start; margin-top: 4.5rem; }
-.area-text p { font-size: 1.05rem; color: var(--text-mid); line-height: 1.9; font-weight: 400; margin-bottom: 1.8rem; }
-.area-highlight {
-  background: white; border-left: 4px solid var(--gold);
-  padding: 2rem 2.5rem; margin-top: 2rem; border-radius: 0 8px 8px 0; box-shadow: 0 8px 25px rgba(0,0,0,0.04);
-}
-.area-highlight h4 { font-family: 'Gowun Batang', serif; font-weight: 700; font-size: 1.15rem; margin-bottom: 1.2rem; color: var(--dark); }
-.area-list { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; }
-.area-list li { font-size: 1rem; color: var(--text-mid); font-weight: 400; display: flex; align-items: center; gap: 1rem; }
-.area-list li::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
-
-.area-map-wrap {
-  border-radius: 12px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.08); border: 1px solid var(--border);
-}
-.map-header { background: var(--charcoal); padding: 1.5rem 2rem; display: flex; align-items: center; gap: 1rem; }
-.map-header-text { font-size: 0.8rem; font-weight: 500; color: rgba(255,255,255,0.5); }
-.map-header-name { font-family: 'Gowun Batang', serif; font-size: 1.1rem; color: white; font-weight: 700; }
-.map-frame-wrap iframe { width: 100%; height: 350px; border: none; display: block; }
-.map-links { display: grid; grid-template-columns: 1fr 1fr; }
-.map-link {
-  padding: 1.2rem 0.5rem; text-align: center; font-size: 0.95rem; font-weight: 600; text-decoration: none;
-  display: flex; align-items: center; justify-content: center; gap: 0.6rem;
-  transition: background 0.2s; border: 1px solid var(--border); border-top: none; background: white; -webkit-tap-highlight-color: transparent;
-}
-.map-link:nth-child(odd) { border-right: none; }
-.map-link:nth-child(1), .map-link:nth-child(2) { border-bottom: none; }
-.map-link.naver { color: #03C75A; } .map-link.naver:hover { background: #F0FFF6; }
-.map-link.google { color: #4285F4; } .map-link.google:hover { background: #F0F4FF; }
-.map-link.kakao { color: #FEE500; background: #3C1E1E; border-color: rgba(255,255,255,0.12); } .map-link.kakao:hover { background: #2a1515; }
-.map-link.tmap { color: #FF6B35; } .map-link.tmap:hover { background: #FFF5F0; }
-
-/* ── CONTACT ── */
-#contact { background: var(--charcoal); color: white; }
-#contact .section-label { color: var(--gold-light); }
-#contact .section-label::before { background: var(--gold-light); }
-#contact .section-title { color: white; }
-.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; margin-top: 4.5rem; }
-.contact-info { display: flex; flex-direction: column; gap: 2.5rem; }
-.contact-item { display: flex; gap: 1.5rem; align-items: flex-start; }
-.contact-item-icon {
-  width: 52px; height: 52px; min-width: 52px; border: 1.5px solid rgba(184,150,90,0.4); border-radius: 50%;
-  display: flex; align-items: center; justify-content: center; color: var(--gold-light);
-}
-.contact-item-label {
-  font-size: 0.8rem; font-weight: 600; letter-spacing: 0.15em; color: rgba(255,255,255,0.45);
-  text-transform: uppercase; margin-bottom: 0.5rem;
-}
-.contact-item-value { font-size: 1.05rem; color: rgba(255,255,255,0.9); font-weight: 400; line-height: 1.8; }
-.contact-item-value a { color: var(--gold-light); text-decoration: none; font-weight: 600; font-size: 1.2rem; transition: opacity 0.2s; }
-.contact-item-value a:hover { opacity: 0.8; }
-
-.contact-hours {
-  background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 8px; padding: 3rem;
-}
-.contact-hours h4 { font-family: 'Gowun Batang', serif; font-size: 1.25rem; font-weight: 700; color: white; margin-bottom: 2rem; }
-.hours-row {
-  display: flex; justify-content: space-between; font-size: 0.95rem; color: rgba(255,255,255,0.7);
-  padding: 0.8rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); font-weight: 400;
-}
-.hours-row:last-child { border-bottom: none; }
-.hours-row span:first-child { color: rgba(255,255,255,0.45); }
-.hours-today { color: var(--gold-light) !important; font-weight: 600 !important; }
-
-.contact-notice {
-  margin-top: 2rem; text-align: center; color: rgba(255,255,255,0.6); font-size: 0.95rem; font-weight: 400;
-  background: rgba(255,255,255,0.02); padding: 1.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.06); line-height: 1.9;
-}
-.contact-notice strong { color: var(--gold-light); font-weight: 600; }
-
-/* ── FOOTER ── */
-footer {
-  background: #0a0a0a; color: rgba(255,255,255,0.4); padding: 4rem 0; font-size: 0.9rem; font-weight: 400; border-top: 1px solid rgba(255,255,255,0.05);
-}
-.footer-inner { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 2rem; }
-.footer-logo { font-family: 'Gowun Batang', serif; font-size: 1.2rem; color: rgba(255,255,255,0.7); font-weight: 700; margin-bottom: 0.8rem; }
-.footer-logo span { color: var(--gold); }
-.footer-reg { line-height: 1.8; }
-
-/* ── FLOATING BAR (CTA) ── */
-.floating-bar {
-  position: fixed; bottom: 0; left: 0; width: 100%; min-height: var(--bar-h);
-  background: rgba(255,255,255,0.98); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-  box-shadow: 0 -4px 25px rgba(0,0,0,0.1); z-index: 999; display: flex; border-top: 1px solid var(--border);
-  padding-bottom: env(safe-area-inset-bottom, 0);
-}
-.flt-btn {
-  flex: 1; display: flex; align-items: center; justify-content: center; flex-direction: column;
-  gap: 0.3rem; padding: 0.8rem 0.2rem; font-size: 0.85rem; font-weight: 700;
-  color: var(--charcoal); text-decoration: none; transition: background 0.2s, color 0.2s, transform 0.1s;
-  border-right: 1px solid rgba(0,0,0,0.06); -webkit-tap-highlight-color: transparent; user-select: none;
-}
-.flt-btn:last-child { border-right: none; }
-.flt-btn:active { transform: scale(0.96); background: rgba(0,0,0,0.05); }
-.flt-btn.kakao { background: #FEE500; color: #3C1E1E; }
-.flt-btn.phone:hover, .flt-btn.sms:hover { background: var(--warm-white); color: var(--gold); }
-.flt-btn.kakao:hover { background: #F4DC00; }
-.flt-icon { width: 22px; height: 22px; flex-shrink: 0; }
-
-/* ── SCROLL REVEAL (애니메이션) ── */
-.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
-.reveal.visible { opacity: 1; transform: none; }
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-
-/* ════════════════════════════════
-   RESPONSIVE (반응형 최적화)
-════════════════════════════════ */
-@media (min-width: 769px) {
-  body { padding-bottom: 0; }
-  .flt-btn { flex-direction: row; font-size: 0.95rem; gap: 0.6rem; padding: 1.2rem 3rem; }
-  .floating-bar {
-    bottom: 30px; left: 50%; transform: translateX(-50%); width: auto; min-height: auto;
-    border-radius: 50px; border: 1px solid var(--border); overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.16); padding-bottom: 0;
-  }
-}
-
-@media (max-width: 1100px) {
-  nav { padding: 1rem 1.8rem; }
-  .nav-links { gap: 1.5rem; }
-  .hero-left { padding: 4rem 2.5rem 4rem 3.5rem; }
-  .why-content { padding: 4rem; }
-  .why-quote { font-size: 2rem; }
-}
-
 @media (max-width: 768px) {
-  .nav-links, .nav-cta { display: none; }
-  .hamburger { display: flex; }
-  #hero { grid-template-columns: 1fr; min-height: auto; }
-  .hero-left { padding: 4rem 1.5rem 3rem; }
-  .hero-right { min-height: 400px; }
-  .hero-greeting { min-height: 400px; padding: 3rem 2rem; }
-  .greeting-quote { font-size: 1.8rem; }
-  section { padding: 5rem 0; }
-  .container { padding: 0 1.5rem; }
-  .services-grid { grid-template-columns: 1fr; margin-top: 3rem; }
-  .service-card { padding: 3rem 2rem; }
-  #why { grid-template-columns: 1fr; }
-  .why-visual { min-height: 300px; }
-  .why-quote { font-size: 1.8rem; }
-  .why-content { padding: 4rem 1.5rem; }
-  .gallery-coming { padding: 3.5rem 1.2rem; }
-  .gallery-coming-desc br { display: none; }
-  .prop-iframe-wrap iframe { height: 60vh; min-height: 400px; }
-  .area-grid { grid-template-columns: 1fr; gap: 3.5rem; }
-  .map-frame-wrap iframe { height: 280px; }
-  .contact-grid { grid-template-columns: 1fr; gap: 3.5rem; margin-top: 3rem; }
-  .contact-hours { padding: 2.5rem 1.5rem; }
-  .footer-inner { flex-direction: column; align-items: flex-start; }
-}
-
-@media (max-width: 480px) {
-  .hero-title { font-size: 1.9rem; }
-  .hero-desc { font-size: 1rem; }
-  .section-title { font-size: 1.7rem; }
-  .hero-stats { gap: 1.8rem; }
-  .prop-iframe-wrap iframe { height: 480px; }
-  .map-links { grid-template-columns: 1fr 1fr; }
-}
-
-@media (max-width: 360px) {
-  .hero-title { font-size: 1.75rem; }
-  .consult-icon-btn { width: 50px; height: 50px; font-size: 1.3rem; }
-  .flt-btn { font-size: 0.75rem; padding: 0.6rem 0.1rem; }
-  .flt-icon { width: 18px; height: 18px; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  .calc-shell { margin-top: 2.5rem; }
+  .calc-topbar { padding: 1.35rem 1.25rem; }
+  .calc-tab-nav { padding: 1.1rem 1.25rem 0; gap: 0.6rem; }
+  .calc-tab-btn { width: 100%; justify-content: center; }
+  .calc-panels { padding: 1.25rem; }
+  .calc-grid { grid-template-columns: 1fr; }
+  .calc-card-body { padding: 1.1rem; }
+  .calc-form-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -997,4 +819,897 @@ footer {
         <p class="service-desc">비즈니스의 성공과 직결되는 상업용 부동산. 정확한 권리금 분석과 오피스텔 수익률 산정으로 성공적인 투자의 길잡이가 되어 드립니다.</p>
       </div>
       <div class="service-card reveal">
-        <span class="service-num">
+        <span class="service-num">04</span><span class="service-icon">📋</span>
+        <div class="service-name">부동산 컨설팅</div>
+        <p class="service-desc">취득세부터 양도세 절세 전략, 대출 가능액 분석까지 매수 전 꼭 필요한 맞춤형 재무 컨설팅을 제공합니다. 현명한 결정을 위한 든든한 나침반이 되겠습니다.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <span class="service-num">05</span><span class="service-icon">📝</span>
+        <div class="service-name">계약서 검토</div>
+        <p class="service-desc">예기치 못한 분쟁을 막는 꼼꼼한 특약사항 작성과 매끄러운 일정 조율. 중개사의 확인·설명 의무를 철저히 이행하여 투명하고 완벽한 거래를 완성합니다.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <span class="service-num">06</span><span class="service-icon">🤝</span>
+        <div class="service-name">사후 관리</div>
+        <p class="service-desc">계약서에 도장을 찍는 것으로 끝나지 않습니다. 이사 및 인테리어 안내, 입주 후 불편사항 중재, 든든한 재계약 관리까지 미소의 서비스는 계속됩니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why" style="padding:0;">
+  <div class="why-visual">
+    <div class="why-visual-content reveal">
+      <div class="why-quote">"좋은 공간이<br>더 나은 삶을 만듭니다"</div>
+      <div class="why-quote-author">— 미소공인중개사사무소 대표 이주영</div>
+    </div>
+  </div>
+  <div class="why-content">
+    <div class="section-label reveal">WHY MISO</div>
+    <h2 class="section-title reveal reveal-delay-1">수많은 곳 중에서도<br><strong><span class="highlight">미소와 함께해야 하는 이유</span></strong></h2>
+    <div class="why-list">
+      <div class="why-item reveal">
+        <div class="why-item-icon">📍</div>
+        <div class="why-item-text">
+          <h4>현장의 온도를 가장 잘 아는 지역 전문가</h4>
+          <p>서울숲리버뷰자이 단지 내에 위치하여 성동구의 생생한 시세 변화를 가장 먼저 체감합니다. 각 단지의 숨은 가치와 정확한 가격 흐름을 예리하게 분석하여 제공합니다.</p>
+        </div>
+      </div>
+      <div class="why-item reveal reveal-delay-1">
+        <div class="why-item-icon">🔒</div>
+        <div class="why-item-text">
+          <h4>보이지 않는 위험까지 차단하는 철저함</h4>
+          <p>단순한 서류 확인을 넘어, 공적 장부의 교차 검증과 복잡한 권리 관계를 완벽하게 분석하여 고객님의 귀한 자산을 사고 없이 안전하게 지킵니다.</p>
+        </div>
+      </div>
+      <div class="why-item reveal reveal-delay-2">
+        <div class="why-item-icon">💬</div>
+        <div class="why-item-text">
+          <h4>감추지 않는 투명함, 타협하지 않는 정직함</h4>
+          <p>원칙에 입각한 정직한 중개보수를 지향합니다. 매물의 장점은 물론 단점까지도 가감 없이 공유하여, 훗날 후회 없는 최선의 결정을 내리실 수 있도록 돕습니다.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="container">
+    <div class="section-label reveal">GALLERY</div>
+    <h2 class="section-title reveal reveal-delay-1">미소 <strong><span class="highlight">갤러리</span></strong></h2>
+    <div class="gallery-coming reveal reveal-delay-2">
+      <div class="gallery-coming-icon">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>
+        </svg>
+      </div>
+      <div class="gallery-coming-badge">COMING SOON</div>
+      <h3 class="gallery-coming-title">갤러리 오픈 준비 중입니다</h3>
+      <p class="gallery-coming-desc">
+        성동구 주요 단지의 생생한 현장 사진과 인테리어 스타일링을 곧 선보일 예정입니다. 조금만 기다려 주세요.
+      </p>
+      <div class="gallery-coming-divider"></div>
+      <p class="gallery-coming-sub">상담은 하단 버튼을 이용해 주세요.</p>
+    </div>
+  </div>
+</section>
+
+<section id="properties">
+  <div class="container">
+    <div class="prop-header">
+      <div>
+        <div class="section-label reveal">LISTINGS</div>
+        <h2 class="section-title reveal reveal-delay-1">실시간 <strong><span class="highlight">맞춤 매물</span></strong></h2>
+      </div>
+      <a href="https://asil.kr/app/agent_intro.jsp?member=V23207" target="_blank" rel="noopener noreferrer" class="prop-more-link reveal">전체 매물 둘러보기 →</a>
+    </div>
+    <div class="prop-iframe-wrap reveal">
+      <div class="prop-iframe-header">
+        <span style="font-size:1.2rem;">🏠</span>
+        <div><div class="prop-iframe-header-text">실시간 연동 매물 목록</div><div class="prop-iframe-header-name">미소공인중개사사무소</div></div>
+      </div>
+      <iframe src="https://asil.kr/app/agent_intro.jsp?member=V23207" title="미소공인중개사사무소 매물 목록" loading="lazy" allowfullscreen sandbox="allow-scripts allow-same-origin allow-popups allow-forms"></iframe>
+      <div class="prop-iframe-footer">
+        <p>📌 매물 정보는 실시간으로 업데이트됩니다. 상세 문의는 하단 전화·카톡 버튼을 이용해 주세요.</p>
+        <a href="https://asil.kr/app/agent_intro.jsp?member=V23207" target="_blank" rel="noopener noreferrer" class="prop-iframe-link">🔗 새 창에서 크게 보기</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="calculator">
+  <div class="container">
+    <div class="section-label reveal">TAX CALCULATOR</div>
+    <h2 class="section-title reveal reveal-delay-1">미리 확인해 보는<br><strong><span class="highlight">부동산 간편 세금 계산기</span></strong></h2>
+    <p class="calc-intro reveal reveal-delay-1">
+      부동산 거래 시 발생하는 주요 세금을 미리 가늠해 볼 수 있는 간편 계산기입니다.<br>본 결과는 참고용 시뮬레이션이며, 실제 세액은 개별 조건에 따라 달라질 수 있습니다.
+    </p>
+
+    <div class="calc-shell reveal reveal-delay-2">
+      <div class="calc-topbar">
+        <div class="calc-topbar-title">부동산 세금 간편 계산</div>
+        <div class="calc-topbar-desc">
+          ※ 취득시기, 주택 수 판정, 감면 특례 등에 따라 결과가 달라질 수 있으므로 정확한 세액은 세무 전문가와 상담하시기 바랍니다.
+        </div>
+      </div>
+
+      <div class="calc-tab-nav" role="tablist" aria-label="세금 계산기 탭">
+        <button type="button" class="calc-tab-btn active" id="calc-tab-capital-gains" data-calc-tab="capital-gains" role="tab" aria-selected="true" aria-controls="calc-panel-capital-gains">양도소득세</button>
+        <button type="button" class="calc-tab-btn" id="calc-tab-inheritance" data-calc-tab="inheritance" role="tab" aria-selected="false" aria-controls="calc-panel-inheritance">상속세</button>
+        <button type="button" class="calc-tab-btn" id="calc-tab-gift" data-calc-tab="gift" role="tab" aria-selected="false" aria-controls="calc-panel-gift">증여세</button>
+      </div>
+
+      <div class="calc-panels">
+        <div class="calc-panel active" id="calc-panel-capital-gains" data-calc-panel="capital-gains" role="tabpanel" aria-labelledby="calc-tab-capital-gains">
+          <div class="calc-grid">
+            <div class="calc-card">
+              <div class="calc-card-head"><h3>양도소득세 입력</h3></div>
+              <div class="calc-card-body">
+                <div class="calc-form-grid">
+                  <div class="calc-field"><label class="calc-label" for="cg-salePrice">양도가액</label><input class="calc-input calc-money" id="cg-salePrice" type="text" inputmode="numeric" value="1,500,000,000"></div>
+                  <div class="calc-field"><label class="calc-label" for="cg-purchasePrice">취득가액</label><input class="calc-input calc-money" id="cg-purchasePrice" type="text" inputmode="numeric" value="900,000,000"></div>
+                  <div class="calc-field"><label class="calc-label" for="cg-expenses">필요경비</label><input class="calc-input calc-money" id="cg-expenses" type="text" inputmode="numeric" value="20,000,000"></div>
+                  <div class="calc-field"><label class="calc-label" for="cg-holdingYears">보유기간(년)</label><input class="calc-input calc-money" id="cg-holdingYears" type="text" inputmode="numeric" value="8"></div>
+                  <div class="calc-field" id="cg-residenceField"><label class="calc-label" for="cg-residenceYears">거주기간(년)</label><input class="calc-input calc-money" id="cg-residenceYears" type="text" inputmode="numeric" value="5"><div class="calc-help" id="cg-residenceHelp">1세대 1주택 비과세 및 고가주택 장기보유특별공제 검토 시 반영됩니다.</div></div>
+                  <div class="calc-field"><label class="calc-label" for="cg-assetType">자산유형</label>
+                    <select class="calc-select" id="cg-assetType">
+                      <option value="house">주택</option>
+                      <option value="land_building">토지/건물</option>
+                      <option value="other">기타자산</option>
+                    </select>
+                  </div>
+                  <div class="calc-field"><label class="calc-label" for="cg-holdingType">보유상태</label>
+                    <select class="calc-select" id="cg-holdingType">
+                      <option value="general">2년 이상 보유</option>
+                      <option value="lt1">1년 미만 보유</option>
+                      <option value="lt2">2년 미만 보유</option>
+                    </select>
+                  </div>
+                  <div class="calc-field"><label class="calc-label" for="cg-houseCount">보유 주택 수</label>
+                    <select class="calc-select" id="cg-houseCount">
+                      <option value="1">1주택</option>
+                      <option value="2">2주택</option>
+                      <option value="3">3주택 이상</option>
+                    </select>
+                  </div>
+                  <div class="calc-field full">
+                    <label class="calc-label">추가 조건</label>
+                    <div class="calc-toggle-row">
+                      <label class="calc-chip"><input id="cg-isOneHouseExempt" type="checkbox" checked> 1세대 1주택 비과세 검토</label>
+                      <label class="calc-chip"><input id="cg-isAdjustmentArea" type="checkbox"> 조정대상지역</label>
+                      <label class="calc-chip"><input id="cg-isUnregistered" type="checkbox"> 미등기 양도자산</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="calc-card">
+              <div class="calc-card-head"><h4>예상 계산 결과</h4></div>
+              <div class="calc-card-body">
+                <div class="calc-summary" id="cg-summary"></div>
+                </div>
+            </div>
+          </div>
+
+          <div class="calc-breakdown-wrap">
+            <div class="calc-breakdown-head">양도소득세 세부 계산 내역</div>
+            <table class="calc-breakdown" id="cg-breakdown"></table>
+          </div>
+          <div class="calc-note">
+            <strong>안내</strong><br>
+            고가 1주택 안분, 장기보유특별공제, 기본공제, 지방소득세를 분리해 간편 계산합니다. 특례와 중과 배제 사유는 별도 검토가 필요할 수 있습니다.
+          </div>
+        </div>
+
+        <div class="calc-panel" id="calc-panel-inheritance" data-calc-panel="inheritance" role="tabpanel" aria-labelledby="calc-tab-inheritance">
+          <div class="calc-grid">
+            <div class="calc-card">
+              <div class="calc-card-head"><h3>상속세 입력</h3></div>
+              <div class="calc-card-body">
+                <div class="calc-form-grid">
+                  <div class="calc-field"><label class="calc-label" for="ih-estateValue">총 상속재산가액</label><input class="calc-input calc-money" id="ih-estateValue" type="text" inputmode="numeric" value="3,000,000,000"></div>
+                  <div class="calc-field"><label class="calc-label" for="ih-debts">채무/공과금/장례비</label><input class="calc-input calc-money" id="ih-debts" type="text" inputmode="numeric" value="100,000,000"></div>
+                  <div class="calc-field"><label class="calc-label" for="ih-priorGift">사망 전 증여재산 가산액</label><input class="calc-input calc-money" id="ih-priorGift" type="text" inputmode="numeric" value="0"></div>
+                  <div class="calc-field"><label class="calc-label" for="ih-spouseActual">배우자 실제 상속분</label><input class="calc-input calc-money" id="ih-spouseActual" type="text" inputmode="numeric" value="800,000,000"></div>
+                  <div class="calc-field"><label class="calc-label" for="ih-humanDeduction">기타 인적공제 합계</label><input class="calc-input calc-money" id="ih-humanDeduction" type="text" inputmode="numeric" value="0"></div>
+                  <div class="calc-field"><label class="calc-label" for="ih-taxCredit">세액공제/기타 감면 합계</label><input class="calc-input calc-money" id="ih-taxCredit" type="text" inputmode="numeric" value="0"></div>
+                  <div class="calc-field full">
+                    <label class="calc-label">상속 구조</label>
+                    <div class="calc-toggle-row">
+                      <label class="calc-chip"><input id="ih-hasSpouse" type="checkbox" checked> 배우자 생존</label>
+                      <label class="calc-chip"><input id="ih-skipGeneration" type="checkbox"> 세대생략 상속</label>
+                      <label class="calc-chip"><input id="ih-minorAndOver20eok" type="checkbox"> 세대생략(미성년자+20억초과)</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="calc-card">
+              <div class="calc-card-head"><h4>예상 계산 결과</h4></div>
+              <div class="calc-card-body">
+                <div class="calc-summary" id="ih-summary"></div>
+                </div>
+            </div>
+          </div>
+
+          <div class="calc-breakdown-wrap">
+            <div class="calc-breakdown-head">상속세 세부 계산 내역</div>
+            <table class="calc-breakdown" id="ih-breakdown"></table>
+          </div>
+          <div class="calc-note">
+            <strong>안내</strong><br>
+            일괄공제, 기초/인적공제 비교, 배우자공제 등을 포함하여 간편 추정합니다. 기한 내 자진신고를 가정한 <strong>신고세액공제(3%)가 자동으로 적용</strong>되어 계산됩니다.
+          </div>
+        </div>
+
+        <div class="calc-panel" id="calc-panel-gift" data-calc-panel="gift" role="tabpanel" aria-labelledby="calc-tab-gift">
+          <div class="calc-grid">
+            <div class="calc-card">
+              <div class="calc-card-head"><h3>증여세 입력</h3></div>
+              <div class="calc-card-body">
+                <div class="calc-form-grid">
+                  <div class="calc-field"><label class="calc-label" for="gf-date">증여일자</label><input class="calc-input" id="gf-date" type="date"></div>
+                  <div class="calc-field"><label class="calc-label" for="gf-relationship">수증자(받는 분)와의 관계</label>
+                    <select class="calc-select" id="gf-relationship">
+                      <option value="spouse">배우자</option>
+                      <option value="linealDescendantAdult">직계비속 (자녀/손자녀 - 성년)</option>
+                      <option value="linealDescendantMinor">직계비속 (자녀/손자녀 - 미성년)</option>
+                      <option value="linealAscendant">직계존속 (부모/조부모)</option>
+                      <option value="otherRelative">기타 친족 (6촌 이내 혈족, 4촌 이내 인척)</option>
+                      <option value="other">그 외 (타인)</option>
+                    </select>
+                  </div>
+                  <div class="calc-field"><label class="calc-label" for="gf-propertyValue">증여받은 재산가액</label><input class="calc-input calc-money" id="gf-propertyValue" type="text" inputmode="numeric" value="500,000,000"></div>
+                  <div class="calc-field"><label class="calc-label" for="gf-debt">채무액</label><input class="calc-input calc-money" id="gf-debt" type="text" inputmode="numeric" value="0"></div>
+                  <div class="calc-field"><label class="calc-label" for="gf-prior10yGift">10년 내 동일인 합산 증여액</label><input class="calc-input calc-money" id="gf-prior10yGift" type="text" inputmode="numeric" value="0"></div>
+                  <div class="calc-field"><label class="calc-label" for="gf-taxCredit">세액공제/기타 감면 합계</label><input class="calc-input calc-money" id="gf-taxCredit" type="text" inputmode="numeric" value="0"></div>
+                  <div class="calc-field"><label class="calc-label" for="gf-marriageDeduction">혼인 증여재산공제</label><input class="calc-input calc-money" id="gf-marriageDeduction" type="text" inputmode="numeric" value="0"></div>
+                  <div class="calc-field"><label class="calc-label" for="gf-birthDeduction">출산 증여재산공제</label><input class="calc-input calc-money" id="gf-birthDeduction" type="text" inputmode="numeric" value="0"></div>
+                  <div class="calc-field full">
+                    <label class="calc-label">추가 조건</label>
+                    <div class="calc-toggle-row">
+                      <label class="calc-chip"><input id="gf-skipGeneration" type="checkbox"> 세대를 건너뛴 증여 (예: 조부모→손자녀)</label>
+                      <label class="calc-chip"><input id="gf-nonResident" type="checkbox"> 수증자 비거주자</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="calc-card">
+              <div class="calc-card-head"><h4>예상 계산 결과</h4></div>
+              <div class="calc-card-body">
+                <div class="calc-summary" id="gf-summary"></div>
+                </div>
+            </div>
+          </div>
+
+          <div class="calc-breakdown-wrap">
+            <div class="calc-breakdown-head">증여세 세부 계산 내역</div>
+            <table class="calc-breakdown" id="gf-breakdown"></table>
+          </div>
+          <div class="calc-note">
+            <strong>안내</strong><br>
+            관계별 공제, 혼인·출산 추가공제(통합 한도 반영) 등을 포함해 추정합니다. 기한 내 자진신고를 가정한 <strong>신고세액공제(3%)가 자동으로 적용</strong>되어 계산됩니다.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="area">
+  <div class="container">
+    <div class="section-label reveal">LOCATION</div>
+    <h2 class="section-title reveal reveal-delay-1">서울숲·성동구<br><strong><span class="highlight">위치 안내</span></strong></h2>
+    <div class="area-grid">
+      <div class="area-text reveal">
+        <p>성동구는 이제 명실상부한 서울의 신흥 중심지입니다. 서울숲이 선사하는 푸른 녹지, 탁 트인 한강 조망, 그리고 사통팔달의 교통망까지, 누구나 꿈꾸는 완벽한 주거 인프라를 자랑합니다.</p>
+        <p>성수동의 트렌디한 문화와 융합된 지속적인 도시 개발로 부동산 가치는 하루가 다르게 상승하고 있습니다. 2호선과 수인분당선 등 쾌속 교통망은 당신의 일상을 더욱 풍요롭게 만들어 줍니다.</p>
+        <div class="area-highlight">
+          <h4>🌿 서울숲 인근 주요 인프라</h4>
+          <ul class="area-list">
+            <li>서울숲공원 (한강 수변 산책·레저)</li>
+            <li>수인분당선 서울숲역 (도보권)</li>
+            <li>지하철 2호선 뚝섬역·성수역 인근</li>
+            <li>성동구청·세무서 등 관공서 밀집</li>
+            <li>서울숲 카페거리·문화·예술 공간</li>
+            <li>한양대학교병원 도보 접근 가능</li>
+          </ul>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <div class="area-map-wrap">
+          <div class="map-header">
+            <span style="font-size:1.2rem;">📍</span>
+            <div><div class="map-header-text">사무소 위치</div><div class="map-header-name">미소공인중개사사무소</div></div>
+          </div>
+          <div class="map-frame-wrap">
+            <iframe src="https://map.naver.com/p/entry/place/1243748367" title="미소공인중개사사무소 네이버 지도" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="map-links">
+            <a href="https://map.naver.com/p/entry/place/1243748367" target="_blank" rel="noopener noreferrer" class="map-link naver">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#03C75A"/><path d="M13.6 12.4L10.2 7H7v10h3.4v-5.4L14.8 17H18V7h-3.4v5.4z" fill="white"/></svg>네이버 지도
+            </a>
+            <a href="https://maps.app.goo.gl/X3Hk238raQwkVXfNA" target="_blank" rel="noopener noreferrer" class="map-link google">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#4285F4"/></svg>구글 지도
+            </a>
+            <a href="https://map.kakao.com/?itemId=318883610" target="_blank" rel="noopener noreferrer" class="map-link kakao">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="10" rx="9" ry="7.5" fill="#FEE500"/><circle cx="9.5" cy="9.5" r="1" fill="#3C1E1E"/><circle cx="14.5" cy="9.5" r="1" fill="#3C1E1E"/><path d="M10 11.5c0.5 0.5 3.5 0.5 4 0" stroke="#3C1E1E" stroke-width="1" fill="none" stroke-linecap="round"/><path d="M9 16l1-3" stroke="#FEE500" stroke-width="2.5" stroke-linecap="round"/></svg>카카오 지도
+            </a>
+            <a href="https://poi.tmobiweb.com/app/share/position?contents=dHlwZT0yJnBrZXk9MTE2NzQ0MzQwMSZwb2lJZD0xMTY3NDQzNCZuYXZTZXE9MSZwb2lOYW1lPeuvuOyGjOqzteyduOykkeqwnOyCrOyCrOustOyGjCZjZW50ZXJYPTAmY2VudGVyWT0wJnRpbWU9MjAyNeuFhCA57JuUIDfsnbwgMTg6MzgmdGVsPTAyLTIyODItNjY2MSZhZGRyPeyEnOyauCDshLHrj5nqtawg6rOg7IKw7J6Q66GcMuq4uCA2Nw==&tailParam=%7B%7D" target="_blank" rel="noopener noreferrer" class="map-link tmap">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#FF6B35"/><path d="M12 4C8.69 4 6 6.69 6 10c0 4.5 6 10 6 10s6-5.5 6-10c0-3.31-2.69-6-6-6zm0 8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" fill="white"/><path d="M8 5.5h8" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>T맵
+            </a>
+          </div>
+        </div>
+        <p style="font-size:0.85rem; color:var(--text-light); margin-top:1.5rem; text-align:center; line-height:1.8;">
+          서울특별시 성동구 고산자로2길 67<br>서울숲리버뷰자이아파트 상가 1동 107호
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="bg-dark">
+  <div class="container">
+    <div class="section-label reveal">CONTACT</div>
+    <h2 class="section-title reveal reveal-delay-1">고객님의 이야기에 귀 기울일 준비가 되어 있습니다.<br><strong><span class="highlight">언제든 편안하게 찾아주세요.</span></strong></h2>
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            </div>
+            <div><div class="contact-item-label">대표 모바일</div><div class="contact-item-value"><a href="tel:010-2714-4399">010-2714-4399</a></div></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l1.84-1.84a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div><div class="contact-item-label">사무실 전화</div><div class="contact-item-value"><a href="tel:02-2282-6661">02-2282-6661</a></div></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div><div class="contact-item-label">사무소 주소</div><div class="contact-item-value">서울특별시 성동구 고산자로2길 67<br>서울숲리버뷰자이아파트 상가 1동 107호</div></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="16" rx="3"/><path d="M4 10h16"/><circle cx="8.5" cy="14" r="1" fill="currentColor" stroke="none"/><circle cx="15.5" cy="14" r="1" fill="currentColor" stroke="none"/><path d="M8 18l-2 4M16 18l2 4"/></svg>
+            </div>
+            <div><div class="contact-item-label">교통 안내</div><div class="contact-item-value">2호선 한양대역 도보 8분<br>경의중앙선 응봉역 도보 10분<br>왕십리역(2·5호선·수인분당선·경의중앙선) 도보 약 10분</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <div class="contact-hours">
+          <h4>⏰ 운영 시간</h4>
+          <div class="hours-row" id="hours-weekday"><span>월요일 – 금요일</span><span>09:00 – 19:00</span></div>
+          <div class="hours-row" id="hours-sat"><span>토요일</span><span class="hours-today">09:00 – 17:00</span></div>
+          <div class="hours-row" id="hours-sun"><span>일요일·공휴일</span><span>사전 예약 시 상담 가능</span></div>
+        </div>
+        <div class="contact-notice">
+          빠른 상담은 화면 하단의<br><strong>📞 전화  ·  💬 문자  ·  카카오톡</strong> 버튼을<br>누르시면 즉시 연결됩니다.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">미소<span>공인중개사</span>사무소</div>
+        <div class="footer-reg">서울특별시 성동구 고산자로2길 67 서울숲리버뷰자이아파트 상가 1동 107호<br>대표 : 이주영  |  📱 010-2714-4399  |  ☎ 02-2282-6661</div>
+      </div>
+      <div style="text-align:right;">
+        <div>© 2026 미소공인중개사사무소. All rights reserved.</div>
+        <div style="margin-top:0.5rem; opacity:0.6;">개인정보처리방침  |  이용약관</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="floating-bar">
+  <a href="tel:010-2714-4399" class="flt-btn phone" aria-label="전화 상담">
+    <svg class="flt-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l1.84-1.84a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <span>전화상담</span>
+  </a>
+  <a href="sms:010-2714-4399" class="flt-btn sms" aria-label="문자 상담">
+    <svg class="flt-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    <span>문자상담</span>
+  </a>
+  <a href="https://open.kakao.com/o/slF2Lkpi" target="_blank" rel="noopener noreferrer" class="flt-btn kakao" aria-label="카카오톡 상담">
+    <svg class="flt-icon" viewBox="0 0 24 24" fill="none"><path d="M12 3c5.523 0 10 3.582 10 8s-4.477 8-10 8c-1.156 0-2.264-.173-3.29-.487l-3.793 2.053a.5.5 0 0 1-.741-.564l1.01-3.52C3.805 14.863 2 11.644 2 11c0-4.418 4.477-8 10-8z" fill="#3C1E1E"/></svg>
+    <span>카톡상담</span>
+  </a>
+</div>
+
+<script>
+// 운영시간: 오늘 요일에 맞는 행 자동 강조
+(function() {
+  const day = new Date().getDay(); // 0=일, 1=월, ..., 6=토
+  let rowId;
+  if (day >= 1 && day <= 5) rowId = 'hours-weekday';
+  else if (day === 6)        rowId = 'hours-sat';
+  else                       rowId = 'hours-sun';
+  const row = document.getElementById(rowId);
+  if (row) row.querySelector('span:last-child').classList.add('hours-today');
+})();
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// 상단 네비게이션 그림자 효과
+window.addEventListener('scroll', () => {
+  document.getElementById('mainNav').style.boxShadow = window.scrollY > 40 ? '0 4px 20px rgba(0,0,0,0.08)' : 'none';
+}, { passive: true });
+
+// 모바일 메뉴 제어
+const ham = document.getElementById('hamburger');
+const mob = document.getElementById('mobileMenu');
+ham.addEventListener('click', e => {
+  e.stopPropagation();
+  const isOpen = ham.classList.toggle('open');
+  mob.classList.toggle('open');
+  ham.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  ham.setAttribute('aria-label', isOpen ? '메뉴 닫기' : '메뉴 열기');
+});
+function closeMenu() {
+  ham.classList.remove('open');
+  mob.classList.remove('open');
+  ham.setAttribute('aria-expanded', 'false');
+  ham.setAttribute('aria-label', '메뉴 열기');
+}
+document.addEventListener('click', e => {
+  if (!ham.contains(e.target) && !mob.contains(e.target)) closeMenu();
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+
+// 앵커 스크롤 위치 보정
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href').slice(1);
+    if (!id) return;
+    const el = document.getElementById(id);
+    if (!el) return;
+    e.preventDefault();
+    const navH = document.querySelector('nav').offsetHeight;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: el.offsetTop - navH, behavior: reducedMotion ? 'auto' : 'smooth' });
+  });
+});
+</script>
+
+<script>
+/* ── TAX CALCULATOR LOGIC (현행 세법 기준 최적화) ── */
+const REALTY_TAX_RULES = {
+  capitalGains: {
+    localIncomeTaxRate: 0.10,
+    basicDeduction: 2500000,
+    luxuryHouseThreshold: 1200000000,
+    progressiveRates: [
+      { upTo: 14000000, rate: 0.06, deduction: 0 },
+      { upTo: 50000000, rate: 0.15, deduction: 1260000 },
+      { upTo: 88000000, rate: 0.24, deduction: 5760000 },
+      { upTo: 150000000, rate: 0.35, deduction: 15440000 },
+      { upTo: 300000000, rate: 0.38, deduction: 19940000 },
+      { upTo: 500000000, rate: 0.40, deduction: 25940000 },
+      { upTo: 1000000000, rate: 0.42, deduction: 35940000 },
+      { upTo: Infinity, rate: 0.45, deduction: 65940000 }
+    ],
+    holdingRates: {
+      lt1: { house: 0.70, land_building: 0.50, other: 0.50 },
+      lt2: { house: 0.60, land_building: 0.40, other: 0.40 },
+      general: null
+    },
+    unregisteredRate: 0.70,
+    heavyTaxAdjustmentArea: { 2: 0.20, 3: 0.30 },
+    longTermSpecialDeduction: {
+      generalAsset: [
+        { years: 3, rate: 0.06 }, { years: 4, rate: 0.08 }, { years: 5, rate: 0.10 },
+        { years: 6, rate: 0.12 }, { years: 7, rate: 0.14 }, { years: 8, rate: 0.16 },
+        { years: 9, rate: 0.18 }, { years: 10, rate: 0.20 }, { years: 11, rate: 0.22 },
+        { years: 12, rate: 0.24 }, { years: 13, rate: 0.26 }, { years: 14, rate: 0.28 },
+        { years: 15, rate: 0.30 }
+      ],
+      oneHouse: { holdPerYear: 0.04, residePerYear: 0.04, maxHold: 0.40, maxReside: 0.40, minYears: 3 }
+    }
+  },
+  inheritance: {
+    lumpSumDeduction: 500000000,
+    basicDeduction: 200000000,
+    spouseMinimumDeduction: 500000000,
+    rates: [
+      { upTo: 100000000, rate: 0.10, deduction: 0 },
+      { upTo: 500000000, rate: 0.20, deduction: 10000000 },
+      { upTo: 1000000000, rate: 0.30, deduction: 60000000 },
+      { upTo: 3000000000, rate: 0.40, deduction: 160000000 },
+      { upTo: Infinity, rate: 0.50, deduction: 460000000 }
+    ],
+    generationSkipSurcharge: { standard: 0.30, minorOver20eok: 0.40 },
+    reportDiscountRate: 0.03
+  },
+  gift: {
+    deductions: {
+      spouse: 600000000,
+      linealDescendantAdult: 50000000,
+      linealDescendantMinor: 20000000,
+      linealAscendant: 50000000,
+      otherRelative: 10000000,
+      other: 0
+    },
+    marriageBirthMax: 100000000,
+    rates: [
+      { upTo: 100000000, rate: 0.10, deduction: 0 },
+      { upTo: 500000000, rate: 0.20, deduction: 10000000 },
+      { upTo: 1000000000, rate: 0.30, deduction: 60000000 },
+      { upTo: 3000000000, rate: 0.40, deduction: 160000000 },
+      { upTo: Infinity, rate: 0.50, deduction: 460000000 }
+    ],
+    generationSkipSurcharge: { standard: 0.30, minorOver20eok: 0.40 },
+    reportDiscountRate: 0.03
+  }
+};
+
+const calcQuery = (selector) => document.querySelector(selector);
+const calcQueries = (selector) => Array.from(document.querySelectorAll(selector));
+
+function calcToNumber(value) {
+  if (typeof value === 'number') return Number.isFinite(value) ? value : 0;
+  const cleaned = String(value ?? '').replace(/,/g, '').replace(/[^0-9.-]/g, '');
+  if (!cleaned || cleaned === '-' || cleaned === '.' || cleaned === '-.') return 0;
+  const parsed = Number(cleaned);
+  return Number.isFinite(parsed) ? parsed : 0;
+}
+
+function calcFormatMoney(value) {
+  return `${Math.round(Number(value || 0)).toLocaleString('ko-KR')}원`;
+}
+
+function calcFormatNumberInput(input) {
+  let cursorPosition = input.selectionStart;
+  let originalLength = input.value.length;
+
+  const raw = String(input.value ?? '').replace(/,/g, '').replace(/[^0-9.-]/g, '');
+  if (!raw || raw === '-' || raw === '.' || raw === '-.') {
+    input.value = raw;
+    return;
+  }
+  const formatted = Number(raw).toLocaleString('ko-KR');
+  input.value = formatted;
+
+  let newLength = formatted.length;
+  cursorPosition = cursorPosition + (newLength - originalLength);
+  input.setSelectionRange(cursorPosition, cursorPosition);
+}
+
+function calcFindProgressiveRow(base, table) {
+  const safeBase = Math.max(0, base);
+  return table.find(item => safeBase <= item.upTo) || table[table.length - 1];
+}
+
+function calcProgressiveTax(base, table) {
+  const safeBase = Math.max(0, base);
+  const row = calcFindProgressiveRow(safeBase, table);
+  return {
+    tax: Math.max(0, safeBase * row.rate - row.deduction),
+    rate: row.rate,
+    deduction: row.deduction
+  };
+}
+
+function calcGeneralAssetLongTermRate(years) {
+  let rate = 0;
+  for (const row of REALTY_TAX_RULES.capitalGains.longTermSpecialDeduction.generalAsset) {
+    if (years >= row.years) rate = row.rate;
+  }
+  return rate;
+}
+
+function calcOneHouseLongTermRate(holdingYears, residenceYears) {
+  const rule = REALTY_TAX_RULES.capitalGains.longTermSpecialDeduction.oneHouse;
+  if (holdingYears < rule.minYears) return 0;
+  const holdingRate = Math.min(rule.maxHold, Math.floor(holdingYears) * rule.holdPerYear);
+  const residenceRate = Math.min(rule.maxReside, Math.floor(residenceYears) * rule.residePerYear);
+  return holdingRate + residenceRate;
+}
+
+function calculateCapitalGainsTax() {
+  const salePrice = calcToNumber(calcQuery('#cg-salePrice')?.value);
+  const purchasePrice = calcToNumber(calcQuery('#cg-purchasePrice')?.value);
+  const expenses = calcToNumber(calcQuery('#cg-expenses')?.value);
+  const holdingYears = Number(calcQuery('#cg-holdingYears')?.value || 0);
+  const residenceYears = Number(calcQuery('#cg-residenceYears')?.value || 0);
+  const assetType = calcQuery('#cg-assetType')?.value || 'house';
+  const holdingType = calcQuery('#cg-holdingType')?.value || 'general';
+  const houseCount = Number(calcQuery('#cg-houseCount')?.value || 1);
+  const isOneHouseExempt = !!calcQuery('#cg-isOneHouseExempt')?.checked;
+  const isAdjustmentArea = !!calcQuery('#cg-isAdjustmentArea')?.checked;
+  const isUnregistered = !!calcQuery('#cg-isUnregistered')?.checked;
+
+  const grossGain = Math.max(0, salePrice - purchasePrice - expenses);
+  const isOneHouse = assetType === 'house' && houseCount === 1 && isOneHouseExempt;
+  const exemptRatio = isOneHouse
+    ? Math.min(1, REALTY_TAX_RULES.capitalGains.luxuryHouseThreshold / Math.max(1, salePrice))
+    : 0;
+  const taxableGainBeforeDeduction = isOneHouse ? grossGain * (1 - exemptRatio) : grossGain;
+
+  let longTermRate = 0;
+  if (isOneHouse) longTermRate = calcOneHouseLongTermRate(holdingYears, residenceYears);
+  else if (assetType !== 'other') longTermRate = calcGeneralAssetLongTermRate(holdingYears);
+
+  const longTermDeduction = taxableGainBeforeDeduction * longTermRate;
+  const incomeAmount = Math.max(0, taxableGainBeforeDeduction - longTermDeduction);
+  const taxBase = Math.max(0, incomeAmount - REALTY_TAX_RULES.capitalGains.basicDeduction);
+
+  let nationalTax = 0;
+  let rateLabel = '기본세율';
+
+  if (isUnregistered) {
+    nationalTax = taxBase * REALTY_TAX_RULES.capitalGains.unregisteredRate;
+    rateLabel = '미등기 70%';
+  } else if (REALTY_TAX_RULES.capitalGains.holdingRates[holdingType]) {
+    const rate = REALTY_TAX_RULES.capitalGains.holdingRates[holdingType][assetType];
+    nationalTax = taxBase * rate;
+    rateLabel = `${Math.round(rate * 100)}% 단기보유세율`;
+  } else {
+    const progressive = calcProgressiveTax(taxBase, REALTY_TAX_RULES.capitalGains.progressiveRates);
+    nationalTax = progressive.tax;
+    if (assetType === 'house' && isAdjustmentArea && houseCount >= 2) {
+      const extra = houseCount >= 3
+        ? REALTY_TAX_RULES.capitalGains.heavyTaxAdjustmentArea[3]
+        : REALTY_TAX_RULES.capitalGains.heavyTaxAdjustmentArea[2];
+      nationalTax = Math.max(nationalTax, progressive.tax + taxBase * extra);
+      rateLabel = `기본세율 + ${Math.round(extra * 100)}%p 중과`;
+    }
+  }
+
+  const localTax = nationalTax * REALTY_TAX_RULES.capitalGains.localIncomeTaxRate;
+  const totalTax = nationalTax + localTax;
+
+  return { grossGain, exemptRatio, taxableGainBeforeDeduction, longTermRate, longTermDeduction, incomeAmount, taxBase, nationalTax, localTax, totalTax, rateLabel };
+}
+
+function calculateInheritanceTax() {
+  const estateValue = calcToNumber(calcQuery('#ih-estateValue')?.value);
+  const debts = calcToNumber(calcQuery('#ih-debts')?.value);
+  const priorGift = calcToNumber(calcQuery('#ih-priorGift')?.value);
+  const spouseActual = calcToNumber(calcQuery('#ih-spouseActual')?.value);
+  const humanDeduction = calcToNumber(calcQuery('#ih-humanDeduction')?.value);
+  const taxCredit = calcToNumber(calcQuery('#ih-taxCredit')?.value);
+  const hasSpouse = !!calcQuery('#ih-hasSpouse')?.checked;
+  const skipGeneration = !!calcQuery('#ih-skipGeneration')?.checked;
+  const minorAndOver20eok = !!calcQuery('#ih-minorAndOver20eok')?.checked;
+
+  const grossTaxableEstate = Math.max(0, estateValue - debts + priorGift);
+  const personalDeductionOption = REALTY_TAX_RULES.inheritance.basicDeduction + humanDeduction;
+  const familyDeduction = Math.max(REALTY_TAX_RULES.inheritance.lumpSumDeduction, personalDeductionOption);
+  const spouseDeduction = hasSpouse ? Math.max(REALTY_TAX_RULES.inheritance.spouseMinimumDeduction, spouseActual) : 0;
+  const taxBase = Math.max(0, grossTaxableEstate - familyDeduction - spouseDeduction);
+  
+  const progressive = calcProgressiveTax(taxBase, REALTY_TAX_RULES.inheritance.rates);
+  const calculatedTax = progressive.tax;
+
+  const surchargeRate = skipGeneration
+    ? (minorAndOver20eok ? REALTY_TAX_RULES.inheritance.generationSkipSurcharge.minorOver20eok : REALTY_TAX_RULES.inheritance.generationSkipSurcharge.standard)
+    : 0;
+  const surcharge = calculatedTax * surchargeRate;
+  const reportDiscount = calculatedTax * REALTY_TAX_RULES.inheritance.reportDiscountRate;
+  const finalTax = Math.max(0, calculatedTax + surcharge - reportDiscount - taxCredit);
+
+  return { grossTaxableEstate, familyDeduction, spouseDeduction, taxBase, calculatedTax, surchargeRate, surcharge, reportDiscount, taxCredit, finalTax };
+}
+
+function calcGiftRelationshipDeduction(relationship) {
+  const rule = REALTY_TAX_RULES.gift.deductions;
+  return rule[relationship] || 0;
+}
+
+function calculateGiftTax() {
+  const relationship = calcQuery('#gf-relationship')?.value || 'spouse';
+  const propertyValue = calcToNumber(calcQuery('#gf-propertyValue')?.value);
+  const debt = calcToNumber(calcQuery('#gf-debt')?.value);
+  const prior10yGift = calcToNumber(calcQuery('#gf-prior10yGift')?.value);
+  const taxCredit = calcToNumber(calcQuery('#gf-taxCredit')?.value);
+  const marriageDeduction = Math.min(calcToNumber(calcQuery('#gf-marriageDeduction')?.value), REALTY_TAX_RULES.gift.marriageBirthMax);
+  const birthDeduction = Math.min(calcToNumber(calcQuery('#gf-birthDeduction')?.value), REALTY_TAX_RULES.gift.marriageBirthMax);
+  const skipGeneration = !!calcQuery('#gf-skipGeneration')?.checked;
+  const isMinor = (relationship === 'linealDescendantMinor');
+
+  const giftTaxableAmount = Math.max(0, propertyValue - debt + prior10yGift);
+  const relationshipDeduction = calcGiftRelationshipDeduction(relationship);
+  
+  // 혼인, 출산 공제 한도 적용 (통합 1억원)
+  const combinedSpecialDeduction = Math.min(marriageDeduction + birthDeduction, REALTY_TAX_RULES.gift.marriageBirthMax);
+  const taxBase = Math.max(0, giftTaxableAmount - relationshipDeduction - combinedSpecialDeduction);
+  
+  const progressive = calcProgressiveTax(taxBase, REALTY_TAX_RULES.gift.rates);
+  const calculatedTax = progressive.tax;
+
+  const surchargeRate = skipGeneration
+    ? ((isMinor && propertyValue > 2000000000) ? REALTY_TAX_RULES.gift.generationSkipSurcharge.minorOver20eok : REALTY_TAX_RULES.gift.generationSkipSurcharge.standard)
+    : 0;
+  const surcharge = calculatedTax * surchargeRate;
+  const reportDiscount = calculatedTax * REALTY_TAX_RULES.gift.reportDiscountRate;
+  const finalTax = Math.max(0, calculatedTax + surcharge - reportDiscount - taxCredit);
+
+  return { giftTaxableAmount, relationshipDeduction, combinedSpecialDeduction, taxBase, calculatedTax, surchargeRate, surcharge, reportDiscount, taxCredit, finalTax };
+}
+
+function renderCalcSummary(containerSelector, items) {
+  const container = calcQuery(containerSelector);
+  if (!container) return;
+  container.innerHTML = items.map(item => `
+    <div class="calc-summary-item ${item.className || ''}">
+      <div class="k">${item.label}</div>
+      <div class="v">${item.value}</div>
+    </div>
+  `).join('');
+}
+
+function renderCalcBreakdown(tableSelector, rows) {
+  const table = calcQuery(tableSelector);
+  if (!table) return;
+  table.innerHTML = `
+    <thead><tr><th scope="col">항목</th><td>금액 / 값</td></tr></thead>
+    <tbody>${rows.map(row => `<tr><th scope="row">${row[0]}</th><td>${row[1]}</td></tr>`).join('')}</tbody>
+  `;
+}
+
+function renderCapitalGainsTax() {
+  const r = calculateCapitalGainsTax();
+  renderCalcSummary('#cg-summary', [
+    { label: '예상 총세액', value: calcFormatMoney(r.totalTax), className: 'primary' },
+    { label: '국세', value: calcFormatMoney(r.nationalTax) },
+    { label: '지방소득세', value: calcFormatMoney(r.localTax) },
+    { label: '적용 방식', value: r.rateLabel }
+  ]);
+  renderCalcBreakdown('#cg-breakdown', [
+    ['총 양도차익', calcFormatMoney(r.grossGain)],
+    ['비과세 비율', `${(r.exemptRatio * 100).toFixed(2)}%`],
+    ['과세대상 양도차익', calcFormatMoney(r.taxableGainBeforeDeduction)],
+    ['장기보유특별공제율', `${(r.longTermRate * 100).toFixed(2)}%`],
+    ['장기보유특별공제액', calcFormatMoney(r.longTermDeduction)],
+    ['양도소득금액', calcFormatMoney(r.incomeAmount)],
+    ['과세표준', calcFormatMoney(r.taxBase)],
+    ['국세', calcFormatMoney(r.nationalTax)],
+    ['지방소득세', calcFormatMoney(r.localTax)],
+    ['총 납부예상세액', calcFormatMoney(r.totalTax)]
+  ]);
+}
+
+function renderInheritanceTax() {
+  const r = calculateInheritanceTax();
+  renderCalcSummary('#ih-summary', [
+    { label: '예상 상속세', value: calcFormatMoney(r.finalTax), className: 'primary' },
+    { label: '과세표준', value: calcFormatMoney(r.taxBase) },
+    { label: '세대생략 할증', value: calcFormatMoney(r.surcharge) },
+    { label: '세액공제/감면', value: calcFormatMoney(r.reportDiscount + r.taxCredit) }
+  ]);
+  renderCalcBreakdown('#ih-breakdown', [
+    ['과세가액(순재산 + 사전증여 가산)', calcFormatMoney(r.grossTaxableEstate)],
+    ['일괄/인적공제 적용액', calcFormatMoney(r.familyDeduction)],
+    ['배우자공제', calcFormatMoney(r.spouseDeduction)],
+    ['과세표준', calcFormatMoney(r.taxBase)],
+    ['산출세액', calcFormatMoney(r.calculatedTax)],
+    ['세대생략 할증률', `${(r.surchargeRate * 100).toFixed(0)}%`],
+    ['세대생략 할증세액', calcFormatMoney(r.surcharge)],
+    ['신고세액공제 (3%)', `- ${calcFormatMoney(r.reportDiscount)}`],
+    ['기타 세액공제/감면', `- ${calcFormatMoney(r.taxCredit)}`],
+    ['최종 납부예상세액', calcFormatMoney(r.finalTax)]
+  ]);
+}
+
+function renderGiftTax() {
+  const r = calculateGiftTax();
+  renderCalcSummary('#gf-summary', [
+    { label: '예상 증여세', value: calcFormatMoney(r.finalTax), className: 'primary' },
+    { label: '과세표준', value: calcFormatMoney(r.taxBase) },
+    { label: '세대생략 할증', value: calcFormatMoney(r.surcharge) },
+    { label: '관계별 공제', value: calcFormatMoney(r.relationshipDeduction) }
+  ]);
+  renderCalcBreakdown('#gf-breakdown', [
+    ['증여재산가액 + 10년 합산 - 채무', calcFormatMoney(r.giftTaxableAmount)],
+    ['관계별 증여재산공제', calcFormatMoney(r.relationshipDeduction)],
+    ['혼인/출산 추가공제', calcFormatMoney(r.combinedSpecialDeduction)],
+    ['과세표준', calcFormatMoney(r.taxBase)],
+    ['산출세액', calcFormatMoney(r.calculatedTax)],
+    ['세대생략 할증률', `${(r.surchargeRate * 100).toFixed(0)}%`],
+    ['세대생략 할증세액', calcFormatMoney(r.surcharge)],
+    ['신고세액공제 (3%)', `- ${calcFormatMoney(r.reportDiscount)}`],
+    ['기타 세액공제/감면', `- ${calcFormatMoney(r.taxCredit)}`],
+    ['최종 납부예상세액', calcFormatMoney(r.finalTax)]
+  ]);
+}
+
+function renderAllRealtyTaxCalculators() {
+  if (!calcQuery('#calculator')) return;
+  renderCapitalGainsTax();
+  renderInheritanceTax();
+  renderGiftTax();
+}
+
+function syncCapitalResidenceFieldState() {
+  const field = calcQuery('#cg-residenceField');
+  const input = calcQuery('#cg-residenceYears');
+  const help = calcQuery('#cg-residenceHelp');
+  if (!field || !input || !help) return;
+
+  const assetType = calcQuery('#cg-assetType')?.value || 'house';
+  const houseCount = Number(calcQuery('#cg-houseCount')?.value || 1);
+  const isOneHouseExempt = !!calcQuery('#cg-isOneHouseExempt')?.checked;
+  const isActive = assetType === 'house' && houseCount === 1 && isOneHouseExempt;
+
+  field.classList.toggle('is-disabled', !isActive);
+  input.disabled = !isActive;
+  input.setAttribute('aria-disabled', isActive ? 'false' : 'true');
+  help.textContent = isActive
+    ? '1세대 1주택 비과세 및 고가주택 장기보유특별공제 검토 시 반영됩니다.'
+    : '현재 선택 조건에서는 거주기간이 세액 계산에 직접 반영되지 않습니다.';
+}
+
+function initRealtyTaxCalculatorTabs() {
+  const buttons = calcQueries('.calc-tab-btn');
+  const panels = calcQueries('.calc-panel');
+  if (!buttons.length) return;
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const target = button.dataset.calcTab;
+      buttons.forEach(btn => {
+        const active = btn === button;
+        btn.classList.toggle('active', active);
+        btn.setAttribute('aria-selected', active ? 'true' : 'false');
+        btn.setAttribute('tabindex', active ? '0' : '-1');
+      });
+      panels.forEach(panel => {
+        panel.classList.toggle('active', panel.dataset.calcPanel === target);
+      });
+    });
+  });
+}
+
+function initRealtyTaxCalculatorInputs() {
+  calcQueries('.calc-money, .calc-input[type="number"]').forEach(input => {
+    if (input.classList.contains('calc-money')) calcFormatNumberInput(input);
+    input.addEventListener('input', () => {
+      if (input.classList.contains('calc-money')) calcFormatNumberInput(input);
+      renderAllRealtyTaxCalculators();
+    });
+    // [입력 편의성] 탭/클릭 시 기존 숫자 전체 블록 지정
+    input.addEventListener('focus', () => {
+      input.select();
+    });
+  });
+
+  calcQueries('#calculator input[type="checkbox"], #calculator select, #calculator input[type="date"]').forEach(el => {
+    el.addEventListener('change', () => {
+      syncCapitalResidenceFieldState();
+      renderAllRealtyTaxCalculators();
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  // 오늘 날짜 자동 세팅
+  const today = new Date().toISOString().split('T')[0];
+  const gfDateInput = calcQuery('#gf-date');
+  if(gfDateInput) gfDateInput.value = today;
+
+  initRealtyTaxCalculatorTabs();
+  initRealtyTaxCalculatorInputs();
+  syncCapitalResidenceFieldState();
+  renderAllRealtyTaxCalculators();
+});
+</script>
+
+</body>
+</html>
